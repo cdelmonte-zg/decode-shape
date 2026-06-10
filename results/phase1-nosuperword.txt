@@ -1,0 +1,1372 @@
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# JMH version: 1.37
+# VM version: JDK 25.0.3, OpenJDK 64-Bit Server VM, 25.0.3+9-2-24.04.2-Ubuntu
+# VM invoker: /usr/lib/jvm/java-25-openjdk-amd64/bin/java
+# VM options: -XX:-UseSuperWord --add-modules=jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode
+# Parameters: (bitWidth = 5, decoder = scalar-array)
+
+# Run progress: 0.00% complete, ETA 00:09:00
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 2180.276 ops/us
+# Warmup Iteration   2: 2196.538 ops/us
+# Warmup Iteration   3: 2207.750 ops/us
+# Warmup Iteration   4: 2203.501 ops/us
+# Warmup Iteration   5: 1999.790 ops/us
+Iteration   1: 1999.574 ops/us
+Iteration   2: 2000.886 ops/us
+Iteration   3: 2001.279 ops/us
+Iteration   4: 1999.417 ops/us
+Iteration   5: 2004.574 ops/us
+
+# Run progress: 1.85% complete, ETA 00:08:57
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 2165.005 ops/us
+# Warmup Iteration   2: 2192.218 ops/us
+# Warmup Iteration   3: 2215.064 ops/us
+# Warmup Iteration   4: 2203.554 ops/us
+# Warmup Iteration   5: 2010.672 ops/us
+Iteration   1: 2007.662 ops/us
+Iteration   2: 2010.872 ops/us
+Iteration   3: 2010.231 ops/us
+Iteration   4: 2010.821 ops/us
+Iteration   5: 2008.922 ops/us
+
+# Run progress: 3.70% complete, ETA 00:08:47
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 2170.155 ops/us
+# Warmup Iteration   2: 2201.677 ops/us
+# Warmup Iteration   3: 2210.786 ops/us
+# Warmup Iteration   4: 2203.500 ops/us
+# Warmup Iteration   5: 2000.081 ops/us
+Iteration   1: 2001.350 ops/us
+Iteration   2: 2001.997 ops/us
+Iteration   3: 2001.823 ops/us
+Iteration   4: 2007.124 ops/us
+Iteration   5: 2001.959 ops/us
+
+
+Result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode":
+  2004.566 ±(99.9%) 4.546 ops/us [Average]
+  (min, avg, max) = (1999.417, 2004.566, 2010.872), stdev = 4.252
+  CI (99.9%): [2000.020, 2009.112] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.3, OpenJDK 64-Bit Server VM, 25.0.3+9-2-24.04.2-Ubuntu
+# VM invoker: /usr/lib/jvm/java-25-openjdk-amd64/bin/java
+# VM options: -XX:-UseSuperWord --add-modules=jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode
+# Parameters: (bitWidth = 5, decoder = scalar-segment)
+
+# Run progress: 5.56% complete, ETA 00:08:37
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 2110.935 ops/us
+# Warmup Iteration   2: 2156.685 ops/us
+# Warmup Iteration   3: 1911.232 ops/us
+# Warmup Iteration   4: 2003.895 ops/us
+# Warmup Iteration   5: 2005.715 ops/us
+Iteration   1: 2005.044 ops/us
+Iteration   2: 2005.333 ops/us
+Iteration   3: 2006.168 ops/us
+Iteration   4: 2005.841 ops/us
+Iteration   5: 2004.630 ops/us
+
+# Run progress: 7.41% complete, ETA 00:08:27
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 2084.197 ops/us
+# Warmup Iteration   2: 2169.260 ops/us
+# Warmup Iteration   3: 1914.012 ops/us
+# Warmup Iteration   4: 2005.323 ops/us
+# Warmup Iteration   5: 2006.624 ops/us
+Iteration   1: 2006.653 ops/us
+Iteration   2: 1999.033 ops/us
+Iteration   3: 1998.590 ops/us
+Iteration   4: 1998.937 ops/us
+Iteration   5: 1983.631 ops/us
+
+# Run progress: 9.26% complete, ETA 00:08:16
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 2116.393 ops/us
+# Warmup Iteration   2: 2155.446 ops/us
+# Warmup Iteration   3: 1906.337 ops/us
+# Warmup Iteration   4: 1999.649 ops/us
+# Warmup Iteration   5: 2001.453 ops/us
+Iteration   1: 2001.212 ops/us
+Iteration   2: 2000.932 ops/us
+Iteration   3: 1985.065 ops/us
+Iteration   4: 2002.266 ops/us
+Iteration   5: 2002.208 ops/us
+
+
+Result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode":
+  2000.370 ±(99.9%) 7.544 ops/us [Average]
+  (min, avg, max) = (1983.631, 2000.370, 2006.653), stdev = 7.056
+  CI (99.9%): [1992.826, 2007.913] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.3, OpenJDK 64-Bit Server VM, 25.0.3+9-2-24.04.2-Ubuntu
+# VM invoker: /usr/lib/jvm/java-25-openjdk-amd64/bin/java
+# VM options: -XX:-UseSuperWord --add-modules=jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode
+# Parameters: (bitWidth = 5, decoder = vector-segment)
+
+# Run progress: 11.11% complete, ETA 00:08:06
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 10773.651 ops/us
+# Warmup Iteration   2: 10820.487 ops/us
+# Warmup Iteration   3: 10314.125 ops/us
+# Warmup Iteration   4: 10310.482 ops/us
+# Warmup Iteration   5: 10298.002 ops/us
+Iteration   1: 10323.096 ops/us
+Iteration   2: 10327.458 ops/us
+Iteration   3: 10313.763 ops/us
+Iteration   4: 10332.208 ops/us
+Iteration   5: 10306.946 ops/us
+
+# Run progress: 12.96% complete, ETA 00:07:56
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 10673.819 ops/us
+# Warmup Iteration   2: 10553.207 ops/us
+# Warmup Iteration   3: 10388.354 ops/us
+# Warmup Iteration   4: 10262.172 ops/us
+# Warmup Iteration   5: 10300.229 ops/us
+Iteration   1: 10363.726 ops/us
+Iteration   2: 10325.060 ops/us
+Iteration   3: 10270.885 ops/us
+Iteration   4: 10306.333 ops/us
+Iteration   5: 10322.701 ops/us
+
+# Run progress: 14.81% complete, ETA 00:07:46
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 10723.601 ops/us
+# Warmup Iteration   2: 10832.135 ops/us
+# Warmup Iteration   3: 10345.788 ops/us
+# Warmup Iteration   4: 10379.220 ops/us
+# Warmup Iteration   5: 10377.071 ops/us
+Iteration   1: 10352.656 ops/us
+Iteration   2: 10332.736 ops/us
+Iteration   3: 10311.660 ops/us
+Iteration   4: 10376.913 ops/us
+Iteration   5: 10377.486 ops/us
+
+
+Result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode":
+  10329.575 ±(99.9%) 30.552 ops/us [Average]
+  (min, avg, max) = (10270.885, 10329.575, 10377.486), stdev = 28.579
+  CI (99.9%): [10299.023, 10360.127] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.3, OpenJDK 64-Bit Server VM, 25.0.3+9-2-24.04.2-Ubuntu
+# VM invoker: /usr/lib/jvm/java-25-openjdk-amd64/bin/java
+# VM options: -XX:-UseSuperWord --add-modules=jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode
+# Parameters: (bitWidth = 8, decoder = scalar-array)
+
+# Run progress: 16.67% complete, ETA 00:07:36
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 2178.981 ops/us
+# Warmup Iteration   2: 2201.569 ops/us
+# Warmup Iteration   3: 2208.982 ops/us
+# Warmup Iteration   4: 2201.758 ops/us
+# Warmup Iteration   5: 2001.407 ops/us
+Iteration   1: 2007.811 ops/us
+Iteration   2: 2010.062 ops/us
+Iteration   3: 2010.413 ops/us
+Iteration   4: 2009.612 ops/us
+Iteration   5: 1985.153 ops/us
+
+# Run progress: 18.52% complete, ETA 00:07:26
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 2166.452 ops/us
+# Warmup Iteration   2: 2208.760 ops/us
+# Warmup Iteration   3: 2207.759 ops/us
+# Warmup Iteration   4: 2202.657 ops/us
+# Warmup Iteration   5: 2000.773 ops/us
+Iteration   1: 2001.400 ops/us
+Iteration   2: 2001.114 ops/us
+Iteration   3: 2001.256 ops/us
+Iteration   4: 2001.027 ops/us
+Iteration   5: 1999.191 ops/us
+
+# Run progress: 20.37% complete, ETA 00:07:16
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 2185.481 ops/us
+# Warmup Iteration   2: 2200.362 ops/us
+# Warmup Iteration   3: 2212.011 ops/us
+# Warmup Iteration   4: 2189.159 ops/us
+# Warmup Iteration   5: 2006.164 ops/us
+Iteration   1: 2004.580 ops/us
+Iteration   2: 1985.119 ops/us
+Iteration   3: 2001.024 ops/us
+Iteration   4: 2000.205 ops/us
+Iteration   5: 1992.475 ops/us
+
+
+Result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode":
+  2000.696 ±(99.9%) 8.490 ops/us [Average]
+  (min, avg, max) = (1985.119, 2000.696, 2010.413), stdev = 7.941
+  CI (99.9%): [1992.206, 2009.186] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.3, OpenJDK 64-Bit Server VM, 25.0.3+9-2-24.04.2-Ubuntu
+# VM invoker: /usr/lib/jvm/java-25-openjdk-amd64/bin/java
+# VM options: -XX:-UseSuperWord --add-modules=jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode
+# Parameters: (bitWidth = 8, decoder = scalar-segment)
+
+# Run progress: 22.22% complete, ETA 00:07:06
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 2120.179 ops/us
+# Warmup Iteration   2: 2156.864 ops/us
+# Warmup Iteration   3: 1906.713 ops/us
+# Warmup Iteration   4: 1998.430 ops/us
+# Warmup Iteration   5: 2002.057 ops/us
+Iteration   1: 2002.278 ops/us
+Iteration   2: 2002.329 ops/us
+Iteration   3: 2002.468 ops/us
+Iteration   4: 2001.478 ops/us
+Iteration   5: 2003.261 ops/us
+
+# Run progress: 24.07% complete, ETA 00:06:55
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 2110.005 ops/us
+# Warmup Iteration   2: 2167.599 ops/us
+# Warmup Iteration   3: 1910.866 ops/us
+# Warmup Iteration   4: 2004.257 ops/us
+# Warmup Iteration   5: 2010.069 ops/us
+Iteration   1: 2009.553 ops/us
+Iteration   2: 2010.009 ops/us
+Iteration   3: 2009.847 ops/us
+Iteration   4: 2010.151 ops/us
+Iteration   5: 2009.042 ops/us
+
+# Run progress: 25.93% complete, ETA 00:06:45
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 2107.471 ops/us
+# Warmup Iteration   2: 2167.225 ops/us
+# Warmup Iteration   3: 1917.475 ops/us
+# Warmup Iteration   4: 1997.982 ops/us
+# Warmup Iteration   5: 2007.340 ops/us
+Iteration   1: 2005.262 ops/us
+Iteration   2: 2004.630 ops/us
+Iteration   3: 2003.876 ops/us
+Iteration   4: 2004.299 ops/us
+Iteration   5: 2006.828 ops/us
+
+
+Result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode":
+  2005.687 ±(99.9%) 3.462 ops/us [Average]
+  (min, avg, max) = (2001.478, 2005.687, 2010.151), stdev = 3.238
+  CI (99.9%): [2002.226, 2009.149] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.3, OpenJDK 64-Bit Server VM, 25.0.3+9-2-24.04.2-Ubuntu
+# VM invoker: /usr/lib/jvm/java-25-openjdk-amd64/bin/java
+# VM options: -XX:-UseSuperWord --add-modules=jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode
+# Parameters: (bitWidth = 8, decoder = vector-segment)
+
+# Run progress: 27.78% complete, ETA 00:06:35
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 10387.686 ops/us
+# Warmup Iteration   2: 10374.987 ops/us
+# Warmup Iteration   3: 10012.215 ops/us
+# Warmup Iteration   4: 10007.111 ops/us
+# Warmup Iteration   5: 10012.723 ops/us
+Iteration   1: 9961.418 ops/us
+Iteration   2: 9946.607 ops/us
+Iteration   3: 9982.730 ops/us
+Iteration   4: 10005.118 ops/us
+Iteration   5: 10038.180 ops/us
+
+# Run progress: 29.63% complete, ETA 00:06:25
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 10591.141 ops/us
+# Warmup Iteration   2: 10407.153 ops/us
+# Warmup Iteration   3: 10075.988 ops/us
+# Warmup Iteration   4: 9886.273 ops/us
+# Warmup Iteration   5: 10117.395 ops/us
+Iteration   1: 9975.743 ops/us
+Iteration   2: 9914.061 ops/us
+Iteration   3: 9913.042 ops/us
+Iteration   4: 9979.388 ops/us
+Iteration   5: 9920.949 ops/us
+
+# Run progress: 31.48% complete, ETA 00:06:15
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 11017.044 ops/us
+# Warmup Iteration   2: 11129.788 ops/us
+# Warmup Iteration   3: 10718.294 ops/us
+# Warmup Iteration   4: 10724.890 ops/us
+# Warmup Iteration   5: 10735.692 ops/us
+Iteration   1: 10553.119 ops/us
+Iteration   2: 10784.257 ops/us
+Iteration   3: 10691.205 ops/us
+Iteration   4: 10700.468 ops/us
+Iteration   5: 10642.913 ops/us
+
+
+Result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode":
+  10200.613 ±(99.9%) 375.522 ops/us [Average]
+  (min, avg, max) = (9913.042, 10200.613, 10784.257), stdev = 351.263
+  CI (99.9%): [9825.091, 10576.135] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.3, OpenJDK 64-Bit Server VM, 25.0.3+9-2-24.04.2-Ubuntu
+# VM invoker: /usr/lib/jvm/java-25-openjdk-amd64/bin/java
+# VM options: -XX:-UseSuperWord --add-modules=jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode
+# Parameters: (bitWidth = 9, decoder = scalar-array)
+
+# Run progress: 33.33% complete, ETA 00:06:05
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 2192.330 ops/us
+# Warmup Iteration   2: 2207.132 ops/us
+# Warmup Iteration   3: 2213.953 ops/us
+# Warmup Iteration   4: 2207.632 ops/us
+# Warmup Iteration   5: 2007.501 ops/us
+Iteration   1: 2006.580 ops/us
+Iteration   2: 2007.328 ops/us
+Iteration   3: 2007.390 ops/us
+Iteration   4: 2001.947 ops/us
+Iteration   5: 2001.087 ops/us
+
+# Run progress: 35.19% complete, ETA 00:05:55
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 2182.653 ops/us
+# Warmup Iteration   2: 2200.477 ops/us
+# Warmup Iteration   3: 2203.399 ops/us
+# Warmup Iteration   4: 2200.531 ops/us
+# Warmup Iteration   5: 2001.999 ops/us
+Iteration   1: 2010.418 ops/us
+Iteration   2: 2010.837 ops/us
+Iteration   3: 2011.365 ops/us
+Iteration   4: 2010.279 ops/us
+Iteration   5: 2002.806 ops/us
+
+# Run progress: 37.04% complete, ETA 00:05:45
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 2187.033 ops/us
+# Warmup Iteration   2: 2207.853 ops/us
+# Warmup Iteration   3: 2215.121 ops/us
+# Warmup Iteration   4: 2203.928 ops/us
+# Warmup Iteration   5: 2009.329 ops/us
+Iteration   1: 2009.708 ops/us
+Iteration   2: 2002.485 ops/us
+Iteration   3: 2001.953 ops/us
+Iteration   4: 2001.758 ops/us
+Iteration   5: 2000.906 ops/us
+
+
+Result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode":
+  2005.790 ±(99.9%) 4.338 ops/us [Average]
+  (min, avg, max) = (2000.906, 2005.790, 2011.365), stdev = 4.058
+  CI (99.9%): [2001.451, 2010.128] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.3, OpenJDK 64-Bit Server VM, 25.0.3+9-2-24.04.2-Ubuntu
+# VM invoker: /usr/lib/jvm/java-25-openjdk-amd64/bin/java
+# VM options: -XX:-UseSuperWord --add-modules=jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode
+# Parameters: (bitWidth = 9, decoder = scalar-segment)
+
+# Run progress: 38.89% complete, ETA 00:05:34
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 2113.830 ops/us
+# Warmup Iteration   2: 2156.760 ops/us
+# Warmup Iteration   3: 1908.519 ops/us
+# Warmup Iteration   4: 1999.597 ops/us
+# Warmup Iteration   5: 2000.159 ops/us
+Iteration   1: 2000.422 ops/us
+Iteration   2: 1998.132 ops/us
+Iteration   3: 2000.455 ops/us
+Iteration   4: 1996.439 ops/us
+Iteration   5: 1999.462 ops/us
+
+# Run progress: 40.74% complete, ETA 00:05:24
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 2112.771 ops/us
+# Warmup Iteration   2: 2154.362 ops/us
+# Warmup Iteration   3: 1913.026 ops/us
+# Warmup Iteration   4: 1997.175 ops/us
+# Warmup Iteration   5: 1998.594 ops/us
+Iteration   1: 1998.869 ops/us
+Iteration   2: 1998.508 ops/us
+Iteration   3: 1999.046 ops/us
+Iteration   4: 1996.110 ops/us
+Iteration   5: 1999.031 ops/us
+
+# Run progress: 42.59% complete, ETA 00:05:14
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 2106.394 ops/us
+# Warmup Iteration   2: 2151.756 ops/us
+# Warmup Iteration   3: 1914.415 ops/us
+# Warmup Iteration   4: 2006.519 ops/us
+# Warmup Iteration   5: 1977.886 ops/us
+Iteration   1: 1999.045 ops/us
+Iteration   2: 1999.762 ops/us
+Iteration   3: 2001.039 ops/us
+Iteration   4: 2000.790 ops/us
+Iteration   5: 2001.221 ops/us
+
+
+Result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode":
+  1999.222 ±(99.9%) 1.627 ops/us [Average]
+  (min, avg, max) = (1996.110, 1999.222, 2001.221), stdev = 1.522
+  CI (99.9%): [1997.595, 2000.849] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.3, OpenJDK 64-Bit Server VM, 25.0.3+9-2-24.04.2-Ubuntu
+# VM invoker: /usr/lib/jvm/java-25-openjdk-amd64/bin/java
+# VM options: -XX:-UseSuperWord --add-modules=jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode
+# Parameters: (bitWidth = 9, decoder = vector-segment)
+
+# Run progress: 44.44% complete, ETA 00:05:04
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 10950.242 ops/us
+# Warmup Iteration   2: 11002.625 ops/us
+# Warmup Iteration   3: 10493.804 ops/us
+# Warmup Iteration   4: 10494.292 ops/us
+# Warmup Iteration   5: 10474.074 ops/us
+Iteration   1: 10497.670 ops/us
+Iteration   2: 10487.745 ops/us
+Iteration   3: 10498.094 ops/us
+Iteration   4: 10456.379 ops/us
+Iteration   5: 10387.051 ops/us
+
+# Run progress: 46.30% complete, ETA 00:04:54
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 10201.472 ops/us
+# Warmup Iteration   2: 10310.151 ops/us
+# Warmup Iteration   3: 9860.505 ops/us
+# Warmup Iteration   4: 9852.433 ops/us
+# Warmup Iteration   5: 9742.483 ops/us
+Iteration   1: 9886.040 ops/us
+Iteration   2: 9878.046 ops/us
+Iteration   3: 9719.949 ops/us
+Iteration   4: 9789.643 ops/us
+Iteration   5: 9846.310 ops/us
+
+# Run progress: 48.15% complete, ETA 00:04:44
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 10909.877 ops/us
+# Warmup Iteration   2: 10944.216 ops/us
+# Warmup Iteration   3: 10634.504 ops/us
+# Warmup Iteration   4: 10407.448 ops/us
+# Warmup Iteration   5: 10505.467 ops/us
+Iteration   1: 10538.558 ops/us
+Iteration   2: 10453.490 ops/us
+Iteration   3: 10499.851 ops/us
+Iteration   4: 10492.207 ops/us
+Iteration   5: 10480.325 ops/us
+
+
+Result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode":
+  10260.757 ±(99.9%) 345.770 ops/us [Average]
+  (min, avg, max) = (9719.949, 10260.757, 10538.558), stdev = 323.434
+  CI (99.9%): [9914.987, 10606.528] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.3, OpenJDK 64-Bit Server VM, 25.0.3+9-2-24.04.2-Ubuntu
+# VM invoker: /usr/lib/jvm/java-25-openjdk-amd64/bin/java
+# VM options: -XX:-UseSuperWord --add-modules=jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode
+# Parameters: (bitWidth = 13, decoder = scalar-array)
+
+# Run progress: 50.00% complete, ETA 00:04:34
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 2169.117 ops/us
+# Warmup Iteration   2: 2199.068 ops/us
+# Warmup Iteration   3: 2207.411 ops/us
+# Warmup Iteration   4: 2196.685 ops/us
+# Warmup Iteration   5: 2000.876 ops/us
+Iteration   1: 2000.546 ops/us
+Iteration   2: 2000.929 ops/us
+Iteration   3: 2000.596 ops/us
+Iteration   4: 2001.593 ops/us
+Iteration   5: 2001.302 ops/us
+
+# Run progress: 51.85% complete, ETA 00:04:23
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 2183.818 ops/us
+# Warmup Iteration   2: 2204.052 ops/us
+# Warmup Iteration   3: 2207.018 ops/us
+# Warmup Iteration   4: 2201.221 ops/us
+# Warmup Iteration   5: 2000.196 ops/us
+Iteration   1: 2000.449 ops/us
+Iteration   2: 1999.441 ops/us
+Iteration   3: 2000.425 ops/us
+Iteration   4: 2006.156 ops/us
+Iteration   5: 2003.495 ops/us
+
+# Run progress: 53.70% complete, ETA 00:04:13
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 2167.501 ops/us
+# Warmup Iteration   2: 2205.945 ops/us
+# Warmup Iteration   3: 2210.669 ops/us
+# Warmup Iteration   4: 2176.748 ops/us
+# Warmup Iteration   5: 1994.529 ops/us
+Iteration   1: 2001.520 ops/us
+Iteration   2: 2009.685 ops/us
+Iteration   3: 2008.859 ops/us
+Iteration   4: 2009.240 ops/us
+Iteration   5: 2008.813 ops/us
+
+
+Result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode":
+  2003.537 ±(99.9%) 4.107 ops/us [Average]
+  (min, avg, max) = (1999.441, 2003.537, 2009.685), stdev = 3.841
+  CI (99.9%): [1999.430, 2007.643] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.3, OpenJDK 64-Bit Server VM, 25.0.3+9-2-24.04.2-Ubuntu
+# VM invoker: /usr/lib/jvm/java-25-openjdk-amd64/bin/java
+# VM options: -XX:-UseSuperWord --add-modules=jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode
+# Parameters: (bitWidth = 13, decoder = scalar-segment)
+
+# Run progress: 55.56% complete, ETA 00:04:03
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 2106.248 ops/us
+# Warmup Iteration   2: 2166.407 ops/us
+# Warmup Iteration   3: 1915.051 ops/us
+# Warmup Iteration   4: 2006.315 ops/us
+# Warmup Iteration   5: 2006.585 ops/us
+Iteration   1: 2006.066 ops/us
+Iteration   2: 2005.851 ops/us
+Iteration   3: 2005.941 ops/us
+Iteration   4: 2006.951 ops/us
+Iteration   5: 2006.754 ops/us
+
+# Run progress: 57.41% complete, ETA 00:03:53
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 2122.170 ops/us
+# Warmup Iteration   2: 2163.430 ops/us
+# Warmup Iteration   3: 1912.531 ops/us
+# Warmup Iteration   4: 2006.160 ops/us
+# Warmup Iteration   5: 2006.809 ops/us
+Iteration   1: 2008.257 ops/us
+Iteration   2: 2007.695 ops/us
+Iteration   3: 2007.466 ops/us
+Iteration   4: 2006.511 ops/us
+Iteration   5: 2005.783 ops/us
+
+# Run progress: 59.26% complete, ETA 00:03:43
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 2110.548 ops/us
+# Warmup Iteration   2: 2165.638 ops/us
+# Warmup Iteration   3: 1911.890 ops/us
+# Warmup Iteration   4: 2000.559 ops/us
+# Warmup Iteration   5: 2000.321 ops/us
+Iteration   1: 2000.878 ops/us
+Iteration   2: 2001.140 ops/us
+Iteration   3: 2001.394 ops/us
+Iteration   4: 1999.680 ops/us
+Iteration   5: 1999.369 ops/us
+
+
+Result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode":
+  2004.649 ±(99.9%) 3.375 ops/us [Average]
+  (min, avg, max) = (1999.369, 2004.649, 2008.257), stdev = 3.157
+  CI (99.9%): [2001.274, 2008.024] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.3, OpenJDK 64-Bit Server VM, 25.0.3+9-2-24.04.2-Ubuntu
+# VM invoker: /usr/lib/jvm/java-25-openjdk-amd64/bin/java
+# VM options: -XX:-UseSuperWord --add-modules=jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode
+# Parameters: (bitWidth = 13, decoder = vector-segment)
+
+# Run progress: 61.11% complete, ETA 00:03:33
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 10761.161 ops/us
+# Warmup Iteration   2: 10948.403 ops/us
+# Warmup Iteration   3: 10271.192 ops/us
+# Warmup Iteration   4: 10247.566 ops/us
+# Warmup Iteration   5: 10325.636 ops/us
+Iteration   1: 10263.637 ops/us
+Iteration   2: 10211.940 ops/us
+Iteration   3: 10254.950 ops/us
+Iteration   4: 10235.684 ops/us
+Iteration   5: 10269.696 ops/us
+
+# Run progress: 62.96% complete, ETA 00:03:22
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 10379.937 ops/us
+# Warmup Iteration   2: 10287.202 ops/us
+# Warmup Iteration   3: 9771.653 ops/us
+# Warmup Iteration   4: 9727.973 ops/us
+# Warmup Iteration   5: 9778.869 ops/us
+Iteration   1: 9781.405 ops/us
+Iteration   2: 9778.121 ops/us
+Iteration   3: 9706.482 ops/us
+Iteration   4: 9533.695 ops/us
+Iteration   5: 9702.173 ops/us
+
+# Run progress: 64.81% complete, ETA 00:03:12
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 10242.399 ops/us
+# Warmup Iteration   2: 10351.999 ops/us
+# Warmup Iteration   3: 9794.750 ops/us
+# Warmup Iteration   4: 9983.706 ops/us
+# Warmup Iteration   5: 9899.302 ops/us
+Iteration   1: 10000.852 ops/us
+Iteration   2: 9997.224 ops/us
+Iteration   3: 9968.024 ops/us
+Iteration   4: 9832.949 ops/us
+Iteration   5: 9975.453 ops/us
+
+
+Result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode":
+  9967.486 ±(99.9%) 257.257 ops/us [Average]
+  (min, avg, max) = (9533.695, 9967.486, 10269.696), stdev = 240.638
+  CI (99.9%): [9710.229, 10224.743] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.3, OpenJDK 64-Bit Server VM, 25.0.3+9-2-24.04.2-Ubuntu
+# VM invoker: /usr/lib/jvm/java-25-openjdk-amd64/bin/java
+# VM options: -XX:-UseSuperWord --add-modules=jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode
+# Parameters: (bitWidth = 16, decoder = scalar-array)
+
+# Run progress: 66.67% complete, ETA 00:03:02
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 2177.375 ops/us
+# Warmup Iteration   2: 2205.280 ops/us
+# Warmup Iteration   3: 2210.829 ops/us
+# Warmup Iteration   4: 2204.474 ops/us
+# Warmup Iteration   5: 2001.964 ops/us
+Iteration   1: 2002.378 ops/us
+Iteration   2: 2001.113 ops/us
+Iteration   3: 2002.457 ops/us
+Iteration   4: 1999.131 ops/us
+Iteration   5: 2002.139 ops/us
+
+# Run progress: 68.52% complete, ETA 00:02:52
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 2175.200 ops/us
+# Warmup Iteration   2: 2202.697 ops/us
+# Warmup Iteration   3: 2211.999 ops/us
+# Warmup Iteration   4: 2205.059 ops/us
+# Warmup Iteration   5: 2000.519 ops/us
+Iteration   1: 2001.074 ops/us
+Iteration   2: 2000.493 ops/us
+Iteration   3: 2000.978 ops/us
+Iteration   4: 1999.975 ops/us
+Iteration   5: 1999.129 ops/us
+
+# Run progress: 70.37% complete, ETA 00:02:42
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 2174.754 ops/us
+# Warmup Iteration   2: 2209.913 ops/us
+# Warmup Iteration   3: 2215.917 ops/us
+# Warmup Iteration   4: 2210.955 ops/us
+# Warmup Iteration   5: 2010.693 ops/us
+Iteration   1: 2010.828 ops/us
+Iteration   2: 2011.006 ops/us
+Iteration   3: 2011.029 ops/us
+Iteration   4: 2010.344 ops/us
+Iteration   5: 2010.462 ops/us
+
+
+Result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode":
+  2004.169 ±(99.9%) 5.246 ops/us [Average]
+  (min, avg, max) = (1999.129, 2004.169, 2011.029), stdev = 4.907
+  CI (99.9%): [1998.923, 2009.415] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.3, OpenJDK 64-Bit Server VM, 25.0.3+9-2-24.04.2-Ubuntu
+# VM invoker: /usr/lib/jvm/java-25-openjdk-amd64/bin/java
+# VM options: -XX:-UseSuperWord --add-modules=jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode
+# Parameters: (bitWidth = 16, decoder = scalar-segment)
+
+# Run progress: 72.22% complete, ETA 00:02:32
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 2116.424 ops/us
+# Warmup Iteration   2: 2166.259 ops/us
+# Warmup Iteration   3: 1912.535 ops/us
+# Warmup Iteration   4: 2006.268 ops/us
+# Warmup Iteration   5: 2010.350 ops/us
+Iteration   1: 2009.775 ops/us
+Iteration   2: 2010.434 ops/us
+Iteration   3: 2009.918 ops/us
+Iteration   4: 2009.623 ops/us
+Iteration   5: 2010.156 ops/us
+
+# Run progress: 74.07% complete, ETA 00:02:22
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 2086.634 ops/us
+# Warmup Iteration   2: 2149.960 ops/us
+# Warmup Iteration   3: 1905.966 ops/us
+# Warmup Iteration   4: 1996.337 ops/us
+# Warmup Iteration   5: 2003.619 ops/us
+Iteration   1: 2004.894 ops/us
+Iteration   2: 2003.659 ops/us
+Iteration   3: 2002.679 ops/us
+Iteration   4: 1987.000 ops/us
+Iteration   5: 2003.890 ops/us
+
+# Run progress: 75.93% complete, ETA 00:02:11
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 2104.880 ops/us
+# Warmup Iteration   2: 2159.709 ops/us
+# Warmup Iteration   3: 1896.919 ops/us
+# Warmup Iteration   4: 1999.926 ops/us
+# Warmup Iteration   5: 2002.178 ops/us
+Iteration   1: 2001.505 ops/us
+Iteration   2: 2002.079 ops/us
+Iteration   3: 2001.676 ops/us
+Iteration   4: 2001.931 ops/us
+Iteration   5: 2001.340 ops/us
+
+
+Result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode":
+  2004.037 ±(99.9%) 6.373 ops/us [Average]
+  (min, avg, max) = (1987.000, 2004.037, 2010.434), stdev = 5.962
+  CI (99.9%): [1997.664, 2010.411] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.3, OpenJDK 64-Bit Server VM, 25.0.3+9-2-24.04.2-Ubuntu
+# VM invoker: /usr/lib/jvm/java-25-openjdk-amd64/bin/java
+# VM options: -XX:-UseSuperWord --add-modules=jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode
+# Parameters: (bitWidth = 16, decoder = vector-segment)
+
+# Run progress: 77.78% complete, ETA 00:02:01
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 9883.035 ops/us
+# Warmup Iteration   2: 9869.470 ops/us
+# Warmup Iteration   3: 10051.197 ops/us
+# Warmup Iteration   4: 9865.676 ops/us
+# Warmup Iteration   5: 10140.270 ops/us
+Iteration   1: 9961.094 ops/us
+Iteration   2: 10124.623 ops/us
+Iteration   3: 10056.681 ops/us
+Iteration   4: 9855.824 ops/us
+Iteration   5: 9979.929 ops/us
+
+# Run progress: 79.63% complete, ETA 00:01:51
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 10886.625 ops/us
+# Warmup Iteration   2: 10831.462 ops/us
+# Warmup Iteration   3: 10460.851 ops/us
+# Warmup Iteration   4: 10470.323 ops/us
+# Warmup Iteration   5: 10499.203 ops/us
+Iteration   1: 10478.582 ops/us
+Iteration   2: 10398.209 ops/us
+Iteration   3: 10449.290 ops/us
+Iteration   4: 10452.459 ops/us
+Iteration   5: 10470.971 ops/us
+
+# Run progress: 81.48% complete, ETA 00:01:41
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 11036.596 ops/us
+# Warmup Iteration   2: 11409.370 ops/us
+# Warmup Iteration   3: 11234.300 ops/us
+# Warmup Iteration   4: 11218.623 ops/us
+# Warmup Iteration   5: 11368.499 ops/us
+Iteration   1: 11306.162 ops/us
+Iteration   2: 11256.997 ops/us
+Iteration   3: 11076.132 ops/us
+Iteration   4: 11236.154 ops/us
+Iteration   5: 11151.174 ops/us
+
+
+Result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode":
+  10550.285 ±(99.9%) 557.896 ops/us [Average]
+  (min, avg, max) = (9855.824, 10550.285, 11306.162), stdev = 521.857
+  CI (99.9%): [9992.389, 11108.182] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.3, OpenJDK 64-Bit Server VM, 25.0.3+9-2-24.04.2-Ubuntu
+# VM invoker: /usr/lib/jvm/java-25-openjdk-amd64/bin/java
+# VM options: -XX:-UseSuperWord --add-modules=jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode
+# Parameters: (bitWidth = 17, decoder = scalar-array)
+
+# Run progress: 83.33% complete, ETA 00:01:31
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 2148.847 ops/us
+# Warmup Iteration   2: 2202.095 ops/us
+# Warmup Iteration   3: 2211.786 ops/us
+# Warmup Iteration   4: 2205.172 ops/us
+# Warmup Iteration   5: 2002.798 ops/us
+Iteration   1: 2003.260 ops/us
+Iteration   2: 2003.090 ops/us
+Iteration   3: 2003.193 ops/us
+Iteration   4: 2003.044 ops/us
+Iteration   5: 2003.570 ops/us
+
+# Run progress: 85.19% complete, ETA 00:01:21
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 2175.320 ops/us
+# Warmup Iteration   2: 2211.737 ops/us
+# Warmup Iteration   3: 2217.780 ops/us
+# Warmup Iteration   4: 2213.575 ops/us
+# Warmup Iteration   5: 2005.485 ops/us
+Iteration   1: 2005.360 ops/us
+Iteration   2: 2003.777 ops/us
+Iteration   3: 1992.151 ops/us
+Iteration   4: 2004.571 ops/us
+Iteration   5: 2004.106 ops/us
+
+# Run progress: 87.04% complete, ETA 00:01:11
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 2172.187 ops/us
+# Warmup Iteration   2: 2163.166 ops/us
+# Warmup Iteration   3: 2209.459 ops/us
+# Warmup Iteration   4: 2203.040 ops/us
+# Warmup Iteration   5: 2000.760 ops/us
+Iteration   1: 2001.225 ops/us
+Iteration   2: 1998.489 ops/us
+Iteration   3: 2001.397 ops/us
+Iteration   4: 1999.149 ops/us
+Iteration   5: 2010.348 ops/us
+
+
+Result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode":
+  2002.448 ±(99.9%) 4.222 ops/us [Average]
+  (min, avg, max) = (1992.151, 2002.448, 2010.348), stdev = 3.949
+  CI (99.9%): [1998.227, 2006.670] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.3, OpenJDK 64-Bit Server VM, 25.0.3+9-2-24.04.2-Ubuntu
+# VM invoker: /usr/lib/jvm/java-25-openjdk-amd64/bin/java
+# VM options: -XX:-UseSuperWord --add-modules=jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode
+# Parameters: (bitWidth = 17, decoder = scalar-segment)
+
+# Run progress: 88.89% complete, ETA 00:01:00
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 2101.141 ops/us
+# Warmup Iteration   2: 2157.747 ops/us
+# Warmup Iteration   3: 1913.160 ops/us
+# Warmup Iteration   4: 2002.018 ops/us
+# Warmup Iteration   5: 2008.473 ops/us
+Iteration   1: 2001.029 ops/us
+Iteration   2: 1999.859 ops/us
+Iteration   3: 2000.658 ops/us
+Iteration   4: 2000.190 ops/us
+Iteration   5: 2000.428 ops/us
+
+# Run progress: 90.74% complete, ETA 00:00:50
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 2092.882 ops/us
+# Warmup Iteration   2: 2159.871 ops/us
+# Warmup Iteration   3: 1913.714 ops/us
+# Warmup Iteration   4: 2003.193 ops/us
+# Warmup Iteration   5: 2007.260 ops/us
+Iteration   1: 2008.034 ops/us
+Iteration   2: 2007.399 ops/us
+Iteration   3: 2007.910 ops/us
+Iteration   4: 2006.804 ops/us
+Iteration   5: 2007.806 ops/us
+
+# Run progress: 92.59% complete, ETA 00:00:40
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 2112.053 ops/us
+# Warmup Iteration   2: 2158.888 ops/us
+# Warmup Iteration   3: 1906.895 ops/us
+# Warmup Iteration   4: 1999.301 ops/us
+# Warmup Iteration   5: 2006.157 ops/us
+Iteration   1: 2006.091 ops/us
+Iteration   2: 2006.754 ops/us
+Iteration   3: 2006.943 ops/us
+Iteration   4: 1967.898 ops/us
+Iteration   5: 1998.872 ops/us
+
+
+Result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode":
+  2001.778 ±(99.9%) 10.714 ops/us [Average]
+  (min, avg, max) = (1967.898, 2001.778, 2008.034), stdev = 10.022
+  CI (99.9%): [1991.065, 2012.492] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.3, OpenJDK 64-Bit Server VM, 25.0.3+9-2-24.04.2-Ubuntu
+# VM invoker: /usr/lib/jvm/java-25-openjdk-amd64/bin/java
+# VM options: -XX:-UseSuperWord --add-modules=jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode
+# Parameters: (bitWidth = 17, decoder = vector-segment)
+
+# Run progress: 94.44% complete, ETA 00:00:30
+# Fork: 1 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 10584.873 ops/us
+# Warmup Iteration   2: 10622.768 ops/us
+# Warmup Iteration   3: 10135.156 ops/us
+# Warmup Iteration   4: 10102.420 ops/us
+# Warmup Iteration   5: 10073.838 ops/us
+Iteration   1: 10065.618 ops/us
+Iteration   2: 10072.133 ops/us
+Iteration   3: 10097.470 ops/us
+Iteration   4: 10129.976 ops/us
+Iteration   5: 10040.482 ops/us
+
+# Run progress: 96.30% complete, ETA 00:00:20
+# Fork: 2 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 10204.180 ops/us
+# Warmup Iteration   2: 10279.108 ops/us
+# Warmup Iteration   3: 9694.869 ops/us
+# Warmup Iteration   4: 9676.627 ops/us
+# Warmup Iteration   5: 9769.879 ops/us
+Iteration   1: 9777.070 ops/us
+Iteration   2: 9660.369 ops/us
+Iteration   3: 9706.852 ops/us
+Iteration   4: 9703.703 ops/us
+Iteration   5: 9701.831 ops/us
+
+# Run progress: 98.15% complete, ETA 00:00:10
+# Fork: 3 of 3
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# Warmup Iteration   1: 9921.526 ops/us
+# Warmup Iteration   2: 10068.560 ops/us
+# Warmup Iteration   3: 9509.778 ops/us
+# Warmup Iteration   4: 9575.754 ops/us
+# Warmup Iteration   5: 9528.542 ops/us
+Iteration   1: 9586.638 ops/us
+Iteration   2: 9492.228 ops/us
+Iteration   3: 9580.291 ops/us
+Iteration   4: 9648.572 ops/us
+Iteration   5: 9607.303 ops/us
+
+
+Result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode":
+  9791.369 ±(99.9%) 238.175 ops/us [Average]
+  (min, avg, max) = (9492.228, 9791.369, 10129.976), stdev = 222.789
+  CI (99.9%): [9553.194, 10029.544] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:09:08
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                 (bitWidth)       (decoder)   Mode  Cnt      Score     Error   Units
+Phase1UnpackBench.decode           5    scalar-array  thrpt   15   2004.566 ±   4.546  ops/us
+Phase1UnpackBench.decode           5  scalar-segment  thrpt   15   2000.370 ±   7.544  ops/us
+Phase1UnpackBench.decode           5  vector-segment  thrpt   15  10329.575 ±  30.552  ops/us
+Phase1UnpackBench.decode           8    scalar-array  thrpt   15   2000.696 ±   8.490  ops/us
+Phase1UnpackBench.decode           8  scalar-segment  thrpt   15   2005.687 ±   3.462  ops/us
+Phase1UnpackBench.decode           8  vector-segment  thrpt   15  10200.613 ± 375.522  ops/us
+Phase1UnpackBench.decode           9    scalar-array  thrpt   15   2005.790 ±   4.338  ops/us
+Phase1UnpackBench.decode           9  scalar-segment  thrpt   15   1999.222 ±   1.627  ops/us
+Phase1UnpackBench.decode           9  vector-segment  thrpt   15  10260.757 ± 345.770  ops/us
+Phase1UnpackBench.decode          13    scalar-array  thrpt   15   2003.537 ±   4.107  ops/us
+Phase1UnpackBench.decode          13  scalar-segment  thrpt   15   2004.649 ±   3.375  ops/us
+Phase1UnpackBench.decode          13  vector-segment  thrpt   15   9967.486 ± 257.257  ops/us
+Phase1UnpackBench.decode          16    scalar-array  thrpt   15   2004.169 ±   5.246  ops/us
+Phase1UnpackBench.decode          16  scalar-segment  thrpt   15   2004.037 ±   6.373  ops/us
+Phase1UnpackBench.decode          16  vector-segment  thrpt   15  10550.285 ± 557.896  ops/us
+Phase1UnpackBench.decode          17    scalar-array  thrpt   15   2002.448 ±   4.222  ops/us
+Phase1UnpackBench.decode          17  scalar-segment  thrpt   15   2001.778 ±  10.714  ops/us
+Phase1UnpackBench.decode          17  vector-segment  thrpt   15   9791.369 ± 238.175  ops/us
+
+Benchmark result is saved to results/phase1-nosuperword.json

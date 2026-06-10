@@ -1,0 +1,357 @@
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# JMH version: 1.37
+# VM version: JDK 25.0.3, OpenJDK 64-Bit Server VM, 25.0.3+9-2-24.04.2-Ubuntu
+# VM invoker: /usr/lib/jvm/java-25-openjdk-amd64/bin/java
+# VM options: --add-modules=jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 1 s each
+# Measurement: 3 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode
+# Parameters: (bitWidth = 16, decoder = scalar-widen)
+
+# Run progress: 0.00% complete, ETA 00:00:06
+# Fork: 1 of 1
+# Preparing profilers: LinuxPerfAsmProfiler 
+# Profilers consume stdout and stderr from target VM, use -v EXTRA to copy to console
+# Warmup Iteration   1: 3513.404 ops/us
+# Warmup Iteration   2: 3674.933 ops/us
+# Warmup Iteration   3: 3758.694 ops/us
+Iteration   1: 3784.154 ops/us
+Iteration   2: 3780.892 ops/us
+Iteration   3: 3778.845 ops/us
+# Processing profiler results: LinuxPerfAsmProfiler 
+
+
+Result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode":
+  3781.297 ±(99.9%) 48.853 ops/us [Average]
+  (min, avg, max) = (3778.845, 3781.297, 3784.154), stdev = 2.678
+  CI (99.9%): [3732.444, 3830.150] (assumes normal distribution)
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:asm":
+PrintAssembly processed: 254235 total address lines.
+Perf output processed (skipped 5.678 seconds):
+ Column 1: cycles (2649 events)
+
+Hottest code regions (>10.00% "cycles" events):
+ Event counts are percents of total event count.
+
+....[Hottest Region 1]..............................................................................
+c2, level 4, dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub, version 4, compile id 971 
+
+             0x000077db20229194:   testl		%r8d, %r8d
+             0x000077db20229197:   jne		0x77db20229508      ;*ifeq {reexecute=0 rethrow=0 return_oop=0}
+                                                                       ; - dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub@30 (line 124)
+             0x000077db2022919d:   movl		$1, %ebx
+             0x000077db202291a2:   jmp		0x77db20229454
+             0x000077db202291a7:   nopw		(%rax, %rax)
+          ↗  0x000077db202291b0:   movl		%r10d, %esi         ;*aload_1 {reexecute=0 rethrow=0 return_oop=0}
+          │                                                            ; - dev.cdelmonte.decodeshape.phase1.ScalarWidenDecoder::decode@68 (line 37)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.Phase1UnpackBench::decode@51 (line 142)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub@17 (line 122)
+   0.04%  │  0x000077db202291b3:   leal		(%rsi, %rsi), %r11d
+          │  0x000077db202291b7:   movslq		%r11d, %rdx         ;*baload {reexecute=0 rethrow=0 return_oop=0}
+          │                                                            ; - dev.cdelmonte.decodeshape.phase1.ScalarWidenDecoder::decode@73 (line 37)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.Phase1UnpackBench::decode@51 (line 142)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub@17 (line 122)
+   0.04%  │  0x000077db202291ba:   movzbl		0x11(%r9, %rdx), %r10d
+   0.60%  │  0x000077db202291c0:   shll		$8, %r10d
+          │  0x000077db202291c4:   vmovd		%r10d, %xmm3
+   0.53%  │  0x000077db202291c9:   movzbl		0x2f(%r9, %rdx), %r10d;*iand {reexecute=0 rethrow=0 return_oop=0}
+          │                                                            ; - dev.cdelmonte.decodeshape.phase1.ScalarWidenDecoder::decode@91 (line 38)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.Phase1UnpackBench::decode@51 (line 142)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub@17 (line 122)
+          │  0x000077db202291cf:   shll		$8, %r10d
+   0.04%  │  0x000077db202291d3:   movzbl		0x2e(%r9, %rdx), %r11d;*iand {reexecute=0 rethrow=0 return_oop=0}
+          │                                                            ; - dev.cdelmonte.decodeshape.phase1.ScalarWidenDecoder::decode@77 (line 37)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.Phase1UnpackBench::decode@51 (line 142)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub@17 (line 122)
+   0.08%  │  0x000077db202291d9:   orl		%r10d, %r11d
+   0.11%  │  0x000077db202291dc:   vmovd		%r11d, %xmm5
+   0.11%  │  0x000077db202291e1:   movzbl		0x2d(%r9, %rdx), %r11d;*iand {reexecute=0 rethrow=0 return_oop=0}
+          │                                                            ; - dev.cdelmonte.decodeshape.phase1.ScalarWidenDecoder::decode@91 (line 38)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.Phase1UnpackBench::decode@51 (line 142)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub@17 (line 122)
+   0.11%  │  0x000077db202291e7:   shll		$8, %r11d
+          │  0x000077db202291eb:   movzbl		0x2c(%r9, %rdx), %r10d;*iand {reexecute=0 rethrow=0 return_oop=0}
+          │                                                            ; - dev.cdelmonte.decodeshape.phase1.ScalarWidenDecoder::decode@77 (line 37)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.Phase1UnpackBench::decode@51 (line 142)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub@17 (line 122)
+          │                                                            ;   {other}
+   0.23%  │  0x000077db202291f1:   orl		%r11d, %r10d
+   0.04%  │  0x000077db202291f4:   vmovd		%r10d, %xmm4
+   0.34%  │  0x000077db202291f9:   movzbl		0x2b(%r9, %rdx), %r10d;*iand {reexecute=0 rethrow=0 return_oop=0}
+          │                                                            ; - dev.cdelmonte.decodeshape.phase1.ScalarWidenDecoder::decode@91 (line 38)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.Phase1UnpackBench::decode@51 (line 142)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub@17 (line 122)
+          │  0x000077db202291ff:   shll		$8, %r10d
+          │  0x000077db20229203:   movzbl		0x2a(%r9, %rdx), %r11d;*iand {reexecute=0 rethrow=0 return_oop=0}
+          │                                                            ; - dev.cdelmonte.decodeshape.phase1.ScalarWidenDecoder::decode@77 (line 37)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.Phase1UnpackBench::decode@51 (line 142)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub@17 (line 122)
+          │  0x000077db20229209:   orl		%r10d, %r11d
+   0.19%  │  0x000077db2022920c:   vmovd		%r11d, %xmm7
+   0.34%  │  0x000077db20229211:   movzbl		0x29(%r9, %rdx), %r11d;*iand {reexecute=0 rethrow=0 return_oop=0}
+          │                                                            ; - dev.cdelmonte.decodeshape.phase1.ScalarWidenDecoder::decode@91 (line 38)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.Phase1UnpackBench::decode@51 (line 142)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub@17 (line 122)
+   2.76%  │  0x000077db20229217:   shll		$8, %r11d
+          │  0x000077db2022921b:   movzbl		0x28(%r9, %rdx), %r10d;*iand {reexecute=0 rethrow=0 return_oop=0}
+          │                                                            ; - dev.cdelmonte.decodeshape.phase1.ScalarWidenDecoder::decode@77 (line 37)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.Phase1UnpackBench::decode@51 (line 142)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub@17 (line 122)
+   0.23%  │  0x000077db20229221:   orl		%r11d, %r10d
+   0.08%  │  0x000077db20229224:   vmovd		%r10d, %xmm6
+   0.19%  │  0x000077db20229229:   movzbl		0x27(%r9, %rdx), %r10d;*iand {reexecute=0 rethrow=0 return_oop=0}
+          │                                                            ; - dev.cdelmonte.decodeshape.phase1.ScalarWidenDecoder::decode@91 (line 38)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.Phase1UnpackBench::decode@51 (line 142)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub@17 (line 122)
+   0.04%  │  0x000077db2022922f:   shll		$8, %r10d
+   5.25%  │  0x000077db20229233:   movzbl		0x26(%r9, %rdx), %r11d;*iand {reexecute=0 rethrow=0 return_oop=0}
+          │                                                            ; - dev.cdelmonte.decodeshape.phase1.ScalarWidenDecoder::decode@77 (line 37)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.Phase1UnpackBench::decode@51 (line 142)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub@17 (line 122)
+          │  0x000077db20229239:   orl		%r10d, %r11d
+   3.78%  │  0x000077db2022923c:   vmovd		%r11d, %xmm9
+   0.34%  │  0x000077db20229241:   movzbl		0x25(%r9, %rdx), %r11d;*iand {reexecute=0 rethrow=0 return_oop=0}
+          │                                                            ; - dev.cdelmonte.decodeshape.phase1.ScalarWidenDecoder::decode@91 (line 38)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.Phase1UnpackBench::decode@51 (line 142)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub@17 (line 122)
+   0.11%  │  0x000077db20229247:   shll		$8, %r11d
+          │  0x000077db2022924b:   movzbl		0x24(%r9, %rdx), %r10d;*iand {reexecute=0 rethrow=0 return_oop=0}
+          │                                                            ; - dev.cdelmonte.decodeshape.phase1.ScalarWidenDecoder::decode@77 (line 37)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.Phase1UnpackBench::decode@51 (line 142)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub@17 (line 122)
+   0.08%  │  0x000077db20229251:   orl		%r11d, %r10d
+          │  0x000077db20229254:   vmovd		%r10d, %xmm8
+  11.40%  │  0x000077db20229259:   movzbl		0x23(%r9, %rdx), %r10d;*iand {reexecute=0 rethrow=0 return_oop=0}
+          │                                                            ; - dev.cdelmonte.decodeshape.phase1.ScalarWidenDecoder::decode@91 (line 38)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.Phase1UnpackBench::decode@51 (line 142)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub@17 (line 122)
+          │  0x000077db2022925f:   shll		$8, %r10d
+   4.79%  │  0x000077db20229263:   movzbl		0x22(%r9, %rdx), %r11d;*iand {reexecute=0 rethrow=0 return_oop=0}
+          │                                                            ; - dev.cdelmonte.decodeshape.phase1.ScalarWidenDecoder::decode@77 (line 37)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.Phase1UnpackBench::decode@51 (line 142)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub@17 (line 122)
+          │  0x000077db20229269:   orl		%r10d, %r11d
+   0.04%  │  0x000077db2022926c:   vmovd		%r11d, %xmm11
+   0.15%  │  0x000077db20229271:   movzbl		0x21(%r9, %rdx), %r11d;*iand {reexecute=0 rethrow=0 return_oop=0}
+          │                                                            ; - dev.cdelmonte.decodeshape.phase1.ScalarWidenDecoder::decode@91 (line 38)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.Phase1UnpackBench::decode@51 (line 142)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub@17 (line 122)
+   0.08%  │  0x000077db20229277:   shll		$8, %r11d
+   0.15%  │  0x000077db2022927b:   movzbl		0x20(%r9, %rdx), %r14d;*iand {reexecute=0 rethrow=0 return_oop=0}
+          │                                                            ; - dev.cdelmonte.decodeshape.phase1.ScalarWidenDecoder::decode@77 (line 37)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.Phase1UnpackBench::decode@51 (line 142)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub@17 (line 122)
+   9.93%  │  0x000077db20229281:   orl		%r11d, %r14d
+   0.04%  │  0x000077db20229284:   movzbl		0x1f(%r9, %rdx), %r10d;*iand {reexecute=0 rethrow=0 return_oop=0}
+          │                                                            ; - dev.cdelmonte.decodeshape.phase1.ScalarWidenDecoder::decode@91 (line 38)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.Phase1UnpackBench::decode@51 (line 142)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub@17 (line 122)
+   4.45%  │  0x000077db2022928a:   shll		$8, %r10d
+          │  0x000077db2022928e:   movzbl		0x1e(%r9, %rdx), %r13d;*iand {reexecute=0 rethrow=0 return_oop=0}
+          │                                                            ; - dev.cdelmonte.decodeshape.phase1.ScalarWidenDecoder::decode@77 (line 37)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.Phase1UnpackBench::decode@51 (line 142)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub@17 (line 122)
+   0.15%  │  0x000077db20229294:   orl		%r10d, %r13d
+   0.23%  │  0x000077db20229297:   movzbl		0x1d(%r9, %rdx), %r8d;*iand {reexecute=0 rethrow=0 return_oop=0}
+          │                                                            ; - dev.cdelmonte.decodeshape.phase1.ScalarWidenDecoder::decode@91 (line 38)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.Phase1UnpackBench::decode@51 (line 142)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub@17 (line 122)
+   0.15%  │  0x000077db2022929d:   shll		$8, %r8d
+   0.23%  │  0x000077db202292a1:   movzbl		0x1c(%r9, %rdx), %r10d;*iand {reexecute=0 rethrow=0 return_oop=0}
+          │                                                            ; - dev.cdelmonte.decodeshape.phase1.ScalarWidenDecoder::decode@77 (line 37)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.Phase1UnpackBench::decode@51 (line 142)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub@17 (line 122)
+  10.23%  │  0x000077db202292a7:   orl		%r8d, %r10d
+   0.08%  │  0x000077db202292aa:   movzbl		0x1b(%r9, %rdx), %ecx;*iand {reexecute=0 rethrow=0 return_oop=0}
+          │                                                            ; - dev.cdelmonte.decodeshape.phase1.ScalarWidenDecoder::decode@91 (line 38)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.Phase1UnpackBench::decode@51 (line 142)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub@17 (line 122)
+   4.11%  │  0x000077db202292b0:   shll		$8, %ecx
+   0.23%  │  0x000077db202292b3:   movzbl		0x1a(%r9, %rdx), %r11d;*iand {reexecute=0 rethrow=0 return_oop=0}
+          │                                                            ; - dev.cdelmonte.decodeshape.phase1.ScalarWidenDecoder::decode@77 (line 37)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.Phase1UnpackBench::decode@51 (line 142)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub@17 (line 122)
+   0.11%  │  0x000077db202292b9:   orl		%ecx, %r11d
+   0.08%  │  0x000077db202292bc:   movzbl		0x19(%r9, %rdx), %ebx;*iand {reexecute=0 rethrow=0 return_oop=0}
+          │                                                            ; - dev.cdelmonte.decodeshape.phase1.ScalarWidenDecoder::decode@91 (line 38)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.Phase1UnpackBench::decode@51 (line 142)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub@17 (line 122)
+          │  0x000077db202292c2:   shll		$8, %ebx
+   0.04%  │  0x000077db202292c5:   movzbl		0x18(%r9, %rdx), %ecx;*iand {reexecute=0 rethrow=0 return_oop=0}
+          │                                                            ; - dev.cdelmonte.decodeshape.phase1.ScalarWidenDecoder::decode@77 (line 37)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.Phase1UnpackBench::decode@51 (line 142)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub@17 (line 122)
+  11.29%  │  0x000077db202292cb:   orl		%ebx, %ecx
+   0.04%  │  0x000077db202292cd:   movzbl		0x17(%r9, %rdx), %ebx;*iand {reexecute=0 rethrow=0 return_oop=0}
+          │                                                            ; - dev.cdelmonte.decodeshape.phase1.ScalarWidenDecoder::decode@91 (line 38)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.Phase1UnpackBench::decode@51 (line 142)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub@17 (line 122)
+   2.04%  │  0x000077db202292d3:   shll		$8, %ebx
+   0.26%  │  0x000077db202292d6:   movzbl		0x16(%r9, %rdx), %r8d;*iand {reexecute=0 rethrow=0 return_oop=0}
+          │                                                            ; - dev.cdelmonte.decodeshape.phase1.ScalarWidenDecoder::decode@77 (line 37)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.Phase1UnpackBench::decode@51 (line 142)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub@17 (line 122)
+   0.11%  │  0x000077db202292dc:   orl		%ebx, %r8d
+   0.08%  │  0x000077db202292df:   movzbl		0x15(%r9, %rdx), %ebx;*iand {reexecute=0 rethrow=0 return_oop=0}
+          │                                                            ; - dev.cdelmonte.decodeshape.phase1.ScalarWidenDecoder::decode@91 (line 38)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.Phase1UnpackBench::decode@51 (line 142)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub@17 (line 122)
+   0.08%  │  0x000077db202292e5:   shll		$8, %ebx
+   0.08%  │  0x000077db202292e8:   movzbl		0x14(%r9, %rdx), %edi;*iand {reexecute=0 rethrow=0 return_oop=0}
+          │                                                            ; - dev.cdelmonte.decodeshape.phase1.ScalarWidenDecoder::decode@77 (line 37)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.Phase1UnpackBench::decode@51 (line 142)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub@17 (line 122)
+          │                                                            ;   {other}
+   7.93%  │  0x000077db202292ee:   orl		%ebx, %edi
+   0.04%  │  0x000077db202292f0:   movzbl		0x13(%r9, %rdx), %ebp;*iand {reexecute=0 rethrow=0 return_oop=0}
+          │                                                            ; - dev.cdelmonte.decodeshape.phase1.ScalarWidenDecoder::decode@91 (line 38)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.Phase1UnpackBench::decode@51 (line 142)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub@17 (line 122)
+   0.72%  │  0x000077db202292f6:   shll		$8, %ebp
+   0.08%  │  0x000077db202292f9:   movzbl		0x12(%r9, %rdx), %ebx
+   0.04%  │  0x000077db202292ff:   orl		%ebp, %ebx
+   0.15%  │  0x000077db20229301:   movzbl		0x10(%r9, %rdx), %ebp;*iand {reexecute=0 rethrow=0 return_oop=0}
+          │                                                            ; - dev.cdelmonte.decodeshape.phase1.ScalarWidenDecoder::decode@77 (line 37)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.Phase1UnpackBench::decode@51 (line 142)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub@17 (line 122)
+          │  0x000077db20229307:   vmovd		%xmm3, %edx
+          │  0x000077db2022930b:   orl		%ebp, %edx
+   3.13%  │  0x000077db2022930d:   movl		%edx, 0x10(%rax, %rsi, 4)
+          │  0x000077db20229311:   movl		%ebx, 0x14(%rax, %rsi, 4)
+   0.26%  │  0x000077db20229315:   movl		%edi, 0x18(%rax, %rsi, 4)
+          │  0x000077db20229319:   movl		%r8d, 0x1c(%rax, %rsi, 4)
+   0.08%  │  0x000077db2022931e:   movl		%ecx, 0x20(%rax, %rsi, 4)
+   0.08%  │  0x000077db20229322:   movl		%r11d, 0x24(%rax, %rsi, 4)
+          │  0x000077db20229327:   movl		%r10d, 0x28(%rax, %rsi, 4)
+          │  0x000077db2022932c:   movl		%r13d, 0x2c(%rax, %rsi, 4)
+   2.38%  │  0x000077db20229331:   movl		%r14d, 0x30(%rax, %rsi, 4)
+   0.04%  │  0x000077db20229336:   vmovd		%xmm11, %r10d
+   0.45%  │  0x000077db2022933b:   movl		%r10d, 0x34(%rax, %rsi, 4)
+   0.04%  │  0x000077db20229340:   vmovd		%xmm8, %r10d
+   0.04%  │  0x000077db20229345:   movl		%r10d, 0x38(%rax, %rsi, 4)
+   0.08%  │  0x000077db2022934a:   vmovd		%xmm9, %r10d
+          │  0x000077db2022934f:   movl		%r10d, 0x3c(%rax, %rsi, 4)
+   0.04%  │  0x000077db20229354:   vmovd		%xmm6, %r10d
+   2.72%  │  0x000077db20229359:   movl		%r10d, 0x40(%rax, %rsi, 4)
+   0.11%  │  0x000077db2022935e:   vmovd		%xmm7, %r10d
+   0.26%  │  0x000077db20229363:   movl		%r10d, 0x44(%rax, %rsi, 4)
+          │  0x000077db20229368:   vmovd		%xmm4, %r10d
+   0.08%  │  0x000077db2022936d:   movl		%r10d, 0x48(%rax, %rsi, 4)
+   0.26%  │  0x000077db20229372:   vmovd		%xmm5, %r10d
+          │  0x000077db20229377:   movl		%r10d, 0x4c(%rax, %rsi, 4)
+          │                                                            ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+          │                                                            ; - dev.cdelmonte.decodeshape.phase1.ScalarWidenDecoder::decode@106 (line 39)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.Phase1UnpackBench::decode@51 (line 142)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub@17 (line 122)
+   0.19%  │  0x000077db2022937c:   leal		0x10(%rsi), %r10d
+   1.70%  │  0x000077db20229380:   cmpl		0x50(%rsp), %r10d
+   0.04%  ╰  0x000077db20229385:   jl		0x77db202291b0      ;*goto {reexecute=0 rethrow=0 return_oop=0}
+                                                                       ; - dev.cdelmonte.decodeshape.phase1.ScalarWidenDecoder::decode@110 (line 36)
+                                                                       ; - dev.cdelmonte.decodeshape.bench.Phase1UnpackBench::decode@51 (line 142)
+                                                                       ; - dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub@17 (line 122)
+             0x000077db2022938b:   movq		0x30(%r15), %r11    ; ImmutableOopMap {r9=Oop rax=Oop xmm0=Oop xmm1=Oop xmm2=Oop xmm13=NarrowOop [88]=Oop }
+                                                                       ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                                                                       ; - (reexecute) dev.cdelmonte.decodeshape.phase1.ScalarWidenDecoder::decode@110 (line 36)
+                                                                       ; - dev.cdelmonte.decodeshape.bench.Phase1UnpackBench::decode@51 (line 142)
+                                                                       ; - dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub@17 (line 122)
+             0x000077db2022938f:   testl		%eax, (%r11)        ;*goto {reexecute=0 rethrow=0 return_oop=0}
+                                                                       ; - dev.cdelmonte.decodeshape.phase1.ScalarWidenDecoder::decode@110 (line 36)
+                                                                       ; - dev.cdelmonte.decodeshape.bench.Phase1UnpackBench::decode@51 (line 142)
+                                                                       ; - dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub@17 (line 122)
+                                                                       ;   {poll}
+   0.04%     0x000077db20229392:   cmpl		$0xfff1, %r10d
+             0x000077db20229399:   jge		0x77db202293f5
+             0x000077db2022939b:   movl		%r10d, %esi
+             0x000077db2022939e:   vmovq		%xmm0, %rdx
+             0x000077db202293a3:   vmovq		%xmm1, %r11
+             0x000077db202293a8:   vmovq		%xmm2, %rdi
+             0x000077db202293ad:   vmovq		%xmm10, %rbx
+....................................................................................................
+  97.21%  <total for region 1>
+
+....[Hottest Regions]...............................................................................
+  97.21%         c2, level 4  dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub, version 4, compile id 971 
+   0.34%   [kernel.kallsyms]  perf_ctx_enable 
+   0.34%   [kernel.kallsyms]  _raw_spin_unlock 
+   0.26%   [kernel.kallsyms]  srso_alias_safe_ret 
+   0.23%   [kernel.kallsyms]  __rcu_read_unlock 
+   0.23%   [kernel.kallsyms]  perf_ctx_unlock 
+   0.19%                      <unknown> 
+   0.15%   [kernel.kallsyms]  __perf_event_task_sched_in 
+   0.15%                      <unknown> 
+   0.08%   [kernel.kallsyms]  get_signal 
+   0.04%   [kernel.kallsyms]  arch_do_signal_or_restart 
+   0.04%   [kernel.kallsyms]  __wake_up 
+   0.04%   [kernel.kallsyms]  futex_unqueue 
+   0.04%   [kernel.kallsyms]  do_futex 
+   0.04%   [kernel.kallsyms]  balance_dirty_pages_ratelimited_flags 
+   0.04%   [kernel.kallsyms]  folio_clear_dirty_for_io 
+   0.04%   [kernel.kallsyms]  mod_memcg_lruvec_state 
+   0.04%   [kernel.kallsyms]  anon_pipe_write 
+   0.04%   [kernel.kallsyms]  dget_parent 
+   0.04%   [kernel.kallsyms]  wbc_account_cgroup_owner 
+   0.42%  <...other 11 warm regions...>
+....................................................................................................
+  99.96%  <totals>
+
+....[Hottest Methods (after inlining)]..............................................................
+  97.24%         c2, level 4  dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub, version 4, compile id 971 
+   0.34%                      <unknown> 
+   0.34%   [kernel.kallsyms]  _raw_spin_unlock 
+   0.34%   [kernel.kallsyms]  perf_ctx_enable 
+   0.26%   [kernel.kallsyms]  srso_alias_safe_ret 
+   0.23%   [kernel.kallsyms]  perf_ctx_unlock 
+   0.23%   [kernel.kallsyms]  __rcu_read_unlock 
+   0.15%   [kernel.kallsyms]  __perf_event_task_sched_in 
+   0.08%   [kernel.kallsyms]  get_signal 
+   0.04%   [kernel.kallsyms]  mod_memcg_lruvec_state 
+   0.04%   [kernel.kallsyms]  dget_parent 
+   0.04%           libjvm.so  ElfSymbolTable::lookup(unsigned char*, int*, int*, int*, ElfFuncDescTable*) 
+   0.04%           libjvm.so  InstanceKlass::find_method_index(Array<Method*> const*, Symbol const*, Symbol const*, Klass::OverpassLookupMode, Klass::StaticLookupMode, Klass::PrivateLookupMode) [clone .constprop.0] 
+   0.04%   [kernel.kallsyms]  __wake_up 
+   0.04%           libjvm.so  VM_HandshakeAllThreads::doit() 
+   0.04%   [kernel.kallsyms]  wbc_account_cgroup_owner 
+   0.04%         interpreter  method entry point (kind = zerolocals)  
+   0.04%   [kernel.kallsyms]  balance_dirty_pages_ratelimited_flags 
+   0.04%         interpreter  aload_2  44 aload_2  
+   0.04%   [kernel.kallsyms]  mutex_lock 
+   0.34%  <...other 9 warm methods...>
+....................................................................................................
+  99.96%  <totals>
+
+....[Distribution by Source]........................................................................
+  97.24%         c2, level 4
+   2.11%   [kernel.kallsyms]
+   0.34%                    
+   0.15%         interpreter
+   0.11%           libjvm.so
+....................................................................................................
+  99.96%  <totals>
+
+
+
+# Run complete. Total time: 00:00:10
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                     (bitWidth)     (decoder)   Mode  Cnt     Score    Error   Units
+Phase1UnpackBench.decode              16  scalar-widen  thrpt    3  3781.297 ± 48.853  ops/us
+Phase1UnpackBench.decode:asm          16  scalar-widen  thrpt            NaN              ---

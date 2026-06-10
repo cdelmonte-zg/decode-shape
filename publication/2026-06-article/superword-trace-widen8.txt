@@ -1,0 +1,87 @@
+# fastdebug TraceAutoVectorization excerpt — ScalarWidenDecoder::decode, width 8, SuperWord ON
+# JDK 25 fastdebug; flag: -XX:CompileCommand=TraceAutoVectorization,*ScalarWidenDecoder.decode,ALL
+# Decisive region: packs are built and implementable, then removed by the profitability filter.
+# Full trace (5768 lines) is regenerable with the command in followup-superword-widen-disasm.md.
+# ----------------------------------------------------------------------------------------------
+
+After SuperWord::filter_packs_for_implemented
+
+PackSet::print: 2 packs
+ Pack: 0
+    0:   930  LoadUB  === 507 7 931  [[ 891 ]]  @byte[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=6; #int:0..255 !orig=816,733,638,281,254,[255],[196] !jvms: ScalarWidenDecoder::decode @ bci:48 (line 32)
+    1:   928  LoadUB  === 507 7 929  [[ 890 ]]  @byte[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=6; #int:0..255 !orig=814,731,281,254,[255],[196] !jvms: ScalarWidenDecoder::decode @ bci:48 (line 32)
+    2:   907  LoadUB  === 507 7 908  [[ 889 ]]  @byte[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=6; #int:0..255 !orig=796,638,281,254,[255],[196] !jvms: ScalarWidenDecoder::decode @ bci:48 (line 32)
+    3:   926  LoadUB  === 507 7 927  [[ 888 ]]  @byte[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=6; #int:0..255 !orig=812,281,254,[255],[196] !jvms: ScalarWidenDecoder::decode @ bci:48 (line 32)
+    4:   924  LoadUB  === 507 7 925  [[ 887 ]]  @byte[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=6; #int:0..255 !orig=733,638,281,254,[255],[196] !jvms: ScalarWidenDecoder::decode @ bci:48 (line 32)
+    5:   922  LoadUB  === 507 7 923  [[ 886 ]]  @byte[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=6; #int:0..255 !orig=731,281,254,[255],[196] !jvms: ScalarWidenDecoder::decode @ bci:48 (line 32)
+    6:   920  LoadUB  === 507 7 921  [[ 882 ]]  @byte[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=6; #int:0..255 !orig=638,281,254,[255],[196] !jvms: ScalarWidenDecoder::decode @ bci:48 (line 32)
+    7:   918  LoadUB  === 507 7 919  [[ 878 ]]  @byte[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=6; #int:0..255 !orig=281,254,[255],[196] !jvms: ScalarWidenDecoder::decode @ bci:48 (line 32)
+    8:   816  LoadUB  === 507 7 817  [[ 806 ]]  @byte[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=6; #int:0..255 !orig=733,638,281,254,[255],[196] !jvms: ScalarWidenDecoder::decode @ bci:48 (line 32)
+    9:   814  LoadUB  === 507 7 815  [[ 802 ]]  @byte[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=6; #int:0..255 !orig=731,281,254,[255],[196] !jvms: ScalarWidenDecoder::decode @ bci:48 (line 32)
+   10:   796  LoadUB  === 507 7 797  [[ 792 ]]  @byte[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=6; #int:0..255 !orig=638,281,254,[255],[196] !jvms: ScalarWidenDecoder::decode @ bci:48 (line 32)
+   11:   812  LoadUB  === 507 7 813  [[ 788 ]]  @byte[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=6; #int:0..255 !orig=281,254,[255],[196] !jvms: ScalarWidenDecoder::decode @ bci:48 (line 32)
+   12:   733  LoadUB  === 507 7 734  [[ 724 ]]  @byte[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=6; #int:0..255 !orig=638,281,254,[255],[196] !jvms: ScalarWidenDecoder::decode @ bci:48 (line 32)
+   13:   731  LoadUB  === 507 7 732  [[ 720 ]]  @byte[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=6; #int:0..255 !orig=281,254,[255],[196] !jvms: ScalarWidenDecoder::decode @ bci:48 (line 32)
+   14:   638  LoadUB  === 507 7 639  [[ 628 ]]  @byte[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=6; #int:0..255 !orig=281,254,[255],[196] !jvms: ScalarWidenDecoder::decode @ bci:48 (line 32)
+   15:   281  LoadUB  === 507 7 282  [[ 271 ]]  @byte[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=6; #int:0..255 !orig=254,[255],[196] !jvms: ScalarWidenDecoder::decode @ bci:48 (line 32)
+ Pack: 1
+    0:   891  StoreI  === 960 964 892 930  [[ 890 ]]  @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=7;  Memory: @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):NotNull:exact+any *, idx=7; !orig=806,724,628,271,231 !jvms: ScalarWidenDecoder::decode @ bci:49 (line 32)
+    1:   890  StoreI  === 960 891 913 928  [[ 889 ]]  @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=7;  Memory: @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):NotNull:exact+any *, idx=7; !orig=802,720,271,231 !jvms: ScalarWidenDecoder::decode @ bci:49 (line 32)
+    2:   889  StoreI  === 960 890 904 907  [[ 888 ]]  @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=7;  Memory: @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):NotNull:exact+any *, idx=7; !orig=792,628,271,231 !jvms: ScalarWidenDecoder::decode @ bci:49 (line 32)
+    3:   888  StoreI  === 960 889 901 926  [[ 887 ]]  @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=7;  Memory: @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):NotNull:exact+any *, idx=7; !orig=788,271,231 !jvms: ScalarWidenDecoder::decode @ bci:49 (line 32)
+    4:   887  StoreI  === 960 888 898 924  [[ 886 ]]  @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=7;  Memory: @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):NotNull:exact+any *, idx=7; !orig=724,628,271,231 !jvms: ScalarWidenDecoder::decode @ bci:49 (line 32)
+    5:   886  StoreI  === 960 887 895 922  [[ 882 ]]  @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=7;  Memory: @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):NotNull:exact+any *, idx=7; !orig=720,271,231 !jvms: ScalarWidenDecoder::decode @ bci:49 (line 32)
+    6:   882  StoreI  === 960 886 883 920  [[ 878 ]]  @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=7;  Memory: @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):NotNull:exact+any *, idx=7; !orig=628,271,231 !jvms: ScalarWidenDecoder::decode @ bci:49 (line 32)
+    7:   878  StoreI  === 960 882 879 918  [[ 806 ]]  @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=7;  Memory: @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):NotNull:exact+any *, idx=7; !orig=271,231 !jvms: ScalarWidenDecoder::decode @ bci:49 (line 32)
+    8:   806  StoreI  === 960 878 807 816  [[ 802 ]]  @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=7;  Memory: @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):NotNull:exact+any *, idx=7; !orig=724,628,271,231 !jvms: ScalarWidenDecoder::decode @ bci:49 (line 32)
+    9:   802  StoreI  === 960 806 803 814  [[ 792 ]]  @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=7;  Memory: @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):NotNull:exact+any *, idx=7; !orig=720,271,231 !jvms: ScalarWidenDecoder::decode @ bci:49 (line 32)
+   10:   792  StoreI  === 960 802 793 796  [[ 788 ]]  @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=7;  Memory: @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):NotNull:exact+any *, idx=7; !orig=628,271,231 !jvms: ScalarWidenDecoder::decode @ bci:49 (line 32)
+   11:   788  StoreI  === 960 792 789 812  [[ 724 ]]  @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=7;  Memory: @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):NotNull:exact+any *, idx=7; !orig=271,231 !jvms: ScalarWidenDecoder::decode @ bci:49 (line 32)
+   12:   724  StoreI  === 960 788 725 733  [[ 720 ]]  @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=7;  Memory: @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):NotNull:exact+any *, idx=7; !orig=628,271,231 !jvms: ScalarWidenDecoder::decode @ bci:49 (line 32)
+   13:   720  StoreI  === 960 724 721 731  [[ 628 ]]  @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=7;  Memory: @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):NotNull:exact+any *, idx=7; !orig=271,231 !jvms: ScalarWidenDecoder::decode @ bci:49 (line 32)
+   14:   628  StoreI  === 960 720 629 638  [[ 271 ]]  @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=7;  Memory: @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):NotNull:exact+any *, idx=7; !orig=271,231 !jvms: ScalarWidenDecoder::decode @ bci:49 (line 32)
+   15:   271  StoreI  === 960 628 272 281  [[ 270 964 493 ]]  @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=7;  Memory: @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):NotNull:exact+any *, idx=7; !orig=231 !jvms: ScalarWidenDecoder::decode @ bci:49 (line 32)
+
+WARNING: Removed pack: not profitable:
+    0:   930  LoadUB  === 507 7 931  [[ 891 ]]  @byte[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=6; #int:0..255 !orig=816,733,638,281,254,[255],[196] !jvms: ScalarWidenDecoder::decode @ bci:48 (line 32)
+    1:   928  LoadUB  === 507 7 929  [[ 890 ]]  @byte[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=6; #int:0..255 !orig=814,731,281,254,[255],[196] !jvms: ScalarWidenDecoder::decode @ bci:48 (line 32)
+    2:   907  LoadUB  === 507 7 908  [[ 889 ]]  @byte[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=6; #int:0..255 !orig=796,638,281,254,[255],[196] !jvms: ScalarWidenDecoder::decode @ bci:48 (line 32)
+    3:   926  LoadUB  === 507 7 927  [[ 888 ]]  @byte[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=6; #int:0..255 !orig=812,281,254,[255],[196] !jvms: ScalarWidenDecoder::decode @ bci:48 (line 32)
+    4:   924  LoadUB  === 507 7 925  [[ 887 ]]  @byte[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=6; #int:0..255 !orig=733,638,281,254,[255],[196] !jvms: ScalarWidenDecoder::decode @ bci:48 (line 32)
+    5:   922  LoadUB  === 507 7 923  [[ 886 ]]  @byte[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=6; #int:0..255 !orig=731,281,254,[255],[196] !jvms: ScalarWidenDecoder::decode @ bci:48 (line 32)
+    6:   920  LoadUB  === 507 7 921  [[ 882 ]]  @byte[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=6; #int:0..255 !orig=638,281,254,[255],[196] !jvms: ScalarWidenDecoder::decode @ bci:48 (line 32)
+    7:   918  LoadUB  === 507 7 919  [[ 878 ]]  @byte[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=6; #int:0..255 !orig=281,254,[255],[196] !jvms: ScalarWidenDecoder::decode @ bci:48 (line 32)
+    8:   816  LoadUB  === 507 7 817  [[ 806 ]]  @byte[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=6; #int:0..255 !orig=733,638,281,254,[255],[196] !jvms: ScalarWidenDecoder::decode @ bci:48 (line 32)
+    9:   814  LoadUB  === 507 7 815  [[ 802 ]]  @byte[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=6; #int:0..255 !orig=731,281,254,[255],[196] !jvms: ScalarWidenDecoder::decode @ bci:48 (line 32)
+   10:   796  LoadUB  === 507 7 797  [[ 792 ]]  @byte[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=6; #int:0..255 !orig=638,281,254,[255],[196] !jvms: ScalarWidenDecoder::decode @ bci:48 (line 32)
+   11:   812  LoadUB  === 507 7 813  [[ 788 ]]  @byte[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=6; #int:0..255 !orig=281,254,[255],[196] !jvms: ScalarWidenDecoder::decode @ bci:48 (line 32)
+   12:   733  LoadUB  === 507 7 734  [[ 724 ]]  @byte[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=6; #int:0..255 !orig=638,281,254,[255],[196] !jvms: ScalarWidenDecoder::decode @ bci:48 (line 32)
+   13:   731  LoadUB  === 507 7 732  [[ 720 ]]  @byte[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=6; #int:0..255 !orig=281,254,[255],[196] !jvms: ScalarWidenDecoder::decode @ bci:48 (line 32)
+   14:   638  LoadUB  === 507 7 639  [[ 628 ]]  @byte[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=6; #int:0..255 !orig=281,254,[255],[196] !jvms: ScalarWidenDecoder::decode @ bci:48 (line 32)
+   15:   281  LoadUB  === 507 7 282  [[ 271 ]]  @byte[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=6; #int:0..255 !orig=254,[255],[196] !jvms: ScalarWidenDecoder::decode @ bci:48 (line 32)
+
+WARNING: Removed pack: not profitable:
+    0:   891  StoreI  === 960 964 892 930  [[ 890 ]]  @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=7;  Memory: @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):NotNull:exact+any *, idx=7; !orig=806,724,628,271,231 !jvms: ScalarWidenDecoder::decode @ bci:49 (line 32)
+    1:   890  StoreI  === 960 891 913 928  [[ 889 ]]  @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=7;  Memory: @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):NotNull:exact+any *, idx=7; !orig=802,720,271,231 !jvms: ScalarWidenDecoder::decode @ bci:49 (line 32)
+    2:   889  StoreI  === 960 890 904 907  [[ 888 ]]  @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=7;  Memory: @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):NotNull:exact+any *, idx=7; !orig=792,628,271,231 !jvms: ScalarWidenDecoder::decode @ bci:49 (line 32)
+    3:   888  StoreI  === 960 889 901 926  [[ 887 ]]  @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=7;  Memory: @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):NotNull:exact+any *, idx=7; !orig=788,271,231 !jvms: ScalarWidenDecoder::decode @ bci:49 (line 32)
+    4:   887  StoreI  === 960 888 898 924  [[ 886 ]]  @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=7;  Memory: @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):NotNull:exact+any *, idx=7; !orig=724,628,271,231 !jvms: ScalarWidenDecoder::decode @ bci:49 (line 32)
+    5:   886  StoreI  === 960 887 895 922  [[ 882 ]]  @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=7;  Memory: @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):NotNull:exact+any *, idx=7; !orig=720,271,231 !jvms: ScalarWidenDecoder::decode @ bci:49 (line 32)
+    6:   882  StoreI  === 960 886 883 920  [[ 878 ]]  @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=7;  Memory: @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):NotNull:exact+any *, idx=7; !orig=628,271,231 !jvms: ScalarWidenDecoder::decode @ bci:49 (line 32)
+    7:   878  StoreI  === 960 882 879 918  [[ 806 ]]  @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=7;  Memory: @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):NotNull:exact+any *, idx=7; !orig=271,231 !jvms: ScalarWidenDecoder::decode @ bci:49 (line 32)
+    8:   806  StoreI  === 960 878 807 816  [[ 802 ]]  @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=7;  Memory: @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):NotNull:exact+any *, idx=7; !orig=724,628,271,231 !jvms: ScalarWidenDecoder::decode @ bci:49 (line 32)
+    9:   802  StoreI  === 960 806 803 814  [[ 792 ]]  @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=7;  Memory: @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):NotNull:exact+any *, idx=7; !orig=720,271,231 !jvms: ScalarWidenDecoder::decode @ bci:49 (line 32)
+   10:   792  StoreI  === 960 802 793 796  [[ 788 ]]  @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=7;  Memory: @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):NotNull:exact+any *, idx=7; !orig=628,271,231 !jvms: ScalarWidenDecoder::decode @ bci:49 (line 32)
+   11:   788  StoreI  === 960 792 789 812  [[ 724 ]]  @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=7;  Memory: @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):NotNull:exact+any *, idx=7; !orig=271,231 !jvms: ScalarWidenDecoder::decode @ bci:49 (line 32)
+   12:   724  StoreI  === 960 788 725 733  [[ 720 ]]  @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=7;  Memory: @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):NotNull:exact+any *, idx=7; !orig=628,271,231 !jvms: ScalarWidenDecoder::decode @ bci:49 (line 32)
+   13:   720  StoreI  === 960 724 721 731  [[ 628 ]]  @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=7;  Memory: @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):NotNull:exact+any *, idx=7; !orig=271,231 !jvms: ScalarWidenDecoder::decode @ bci:49 (line 32)
+   14:   628  StoreI  === 960 720 629 638  [[ 271 ]]  @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=7;  Memory: @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):NotNull:exact+any *, idx=7; !orig=271,231 !jvms: ScalarWidenDecoder::decode @ bci:49 (line 32)
+   15:   271  StoreI  === 960 628 272 281  [[ 270 964 493 ]]  @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):exact+any *, idx=7;  Memory: @int[int:>=0] (java/lang/Cloneable,java/io/Serializable):NotNull:exact+any *, idx=7; !orig=231 !jvms: ScalarWidenDecoder::decode @ bci:49 (line 32)
+
+After Superword::filter_packs_for_profitable
+
+PackSet::print: 0 packs
+
+SuperWord::transform_loop failed: SuperWord::SLP_extract did not vectorize
+
+VLoop::check_preconditions

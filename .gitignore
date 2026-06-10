@@ -1,0 +1,23 @@
+target/
+*.class
+*.log
+# JMH raw output
+jmh-result.*
+results/*.json
+results/*.csv
+.idea/
+*.iml
+
+# shade plugin artifact
+dependency-reduced-pom.xml
+
+# dated run artifacts + reports from run_lab.sh
+reports/
+__pycache__/
+.venv/
+
+# Level-1 disassembly dumps (regenerable via dump_asm.sh; large)
+results/asm/
+# hsdis build artifacts (sparse JDK clone + compiled .so; build-hsdis.sh is tracked)
+hsdis-build/jdk/
+hsdis-build/lib/
