@@ -152,7 +152,11 @@ def figure2(on, off, err, out):
     flo = [off[k] if k in off else on[k] for k in kf]
     vece = [err.get(k, 0.0) for k in kv]
     floe = [err.get(k, 0.0) for k in kf]
-    ratios = ["gap 1.3-1.65×", "gap 2.4-2.65×", "gap 4.7×"]
+    # each gap is computed against a different scalar baseline; name it so the
+    # bars are not mistaken for one continuous "vector vs scalar" ratio.
+    ratios = ["gap 1.3-1.65×\n(vs widening scalar)",
+              "gap 2.4-2.65×\n(vs widening scalar)",
+              "gap 4.7×\n(vs generic scalar)"]
 
     fig, ax = plt.subplots(figsize=(8.2, 4.9))
     style(ax)
@@ -162,7 +166,7 @@ def figure2(on, off, err, out):
     ax.bar(x - bw / 2, vec, bw, yerr=vece, capsize=3, color=C_VECTOR,
            ecolor="#1e3a8a", error_kw=ekw, label="vector (explicit)", zorder=3)
     ax.bar(x + bw / 2, flo, bw, yerr=floe, capsize=3, color=C_FLOOR,
-           ecolor="#134e4a", error_kw=ekw, label="best achievable scalar", zorder=3)
+           ecolor="#134e4a", error_kw=ekw, label="scalar baseline (per regime)", zorder=3)
 
     for xi, v, e in zip(x - bw / 2, vec, vece):
         ax.annotate(f"{v:.0f}", (xi, v + e), xytext=(0, 3), textcoords="offset points",
@@ -178,7 +182,7 @@ def figure2(on, off, err, out):
     ax.set_ylabel("throughput (values/µs)")
     ax.set_xticks(x)
     ax.set_xticklabels(regimes)
-    ax.set_ylim(0, max(vec) * 1.25)
+    ax.set_ylim(0, max(vec) * 1.38)
     ax.legend(frameon=False, loc="upper center", bbox_to_anchor=(0.5, -0.20),
               ncol=2, fontsize=10.5)
     fig.text(0.5, -0.05,

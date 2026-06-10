@@ -14,6 +14,7 @@
 #   ./run_lab.sh --no-env        # don't touch governor/perf (no sudo); perfnorm skipped
 #   ./run_lab.sh --no-restore    # leave the tuned environment in place afterwards
 #   ./run_lab.sh -o /some/dir    # output base directory (default ./reports)
+#   ./run_lab.sh --pin 0-7       # pin all JMH forks to a CPU list (one CCD) for stable placement
 #
 # Privileged steps (governor + perf_event_paranoid) escalate via sudo INTERNALLY
 # through bench-system.sh, so do NOT run this whole script as root: run it as your
@@ -42,6 +43,7 @@ JAR="target/benchmarks.jar"
 PROFILE="default"
 DO_ENV=1
 DO_RESTORE=1
+PIN=""
 OUTBASE="$REPO/reports"
 
 usage() { sed -n '2,30p' "${BASH_SOURCE[0]}" | sed 's/^# \{0,1\}//'; }
@@ -53,12 +55,23 @@ while [ $# -gt 0 ]; do
     --publication) PROFILE="publication" ;;
     --no-env)      DO_ENV=0 ;;
     --no-restore) DO_RESTORE=0 ;;
+    --pin)        PIN="${2:?--pin needs a CPU list, e.g. 0-7}"; shift ;;
     -o|--out)     OUTBASE="${2:?-o needs a directory}"; shift ;;
     -h|--help)    usage; exit 0 ;;
     *) echo "unknown option: $1" >&2; echo "try: $0 --help" >&2; exit 2 ;;
   esac
   shift
 done
+
+# ---- CPU affinity: re-exec the whole run (and its JMH forks) under taskset ----
+# so every fork is measured on the same core type. On a multi-CCD chip (e.g. the
+# Ryzen 9 7950X3D: CCD0=0-7, CCD1=8-15) unpinned forks can land on different CCDs
+# with different clocks and bias the ratios. The _PINNED guard avoids re-exec loops.
+if [ -n "$PIN" ] && [ -z "${_PINNED:-}" ]; then
+  command -v taskset >/dev/null || { echo "taskset not found (install util-linux)"; exit 1; }
+  export _PINNED=1
+  exec taskset -c "$PIN" "$0" "$@"
+fi
 
 # FORKS | WARMUP iters x WARMUP_T s | ITERS measure x MEAS_T s
 case "$PROFILE" in
@@ -160,6 +173,8 @@ GIT_DIRTY=no; [ -n "$(git status --porcelain 2>/dev/null)" ] && GIT_DIRTY=yes
   echo "kernel=$(uname -r)"
   echo "cpu=$(grep -m1 'model name' /proc/cpuinfo | cut -d: -f2- | sed 's/^ *//')"
   echo "governor=$(cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor 2>/dev/null || echo '?')"
+  echo "pin=${PIN:-none}"
+  echo "affinity=$(taskset -cp $$ 2>/dev/null | sed 's/.*: //' || echo '?')"
   echo "paranoid=$(cat /proc/sys/kernel/perf_event_paranoid 2>/dev/null || echo '?')"
   echo "jdk=$("$JAVA" -version 2>&1 | head -1 | tr -d '"')"
   echo "git_commit=$(git rev-parse --short HEAD 2>/dev/null || echo '?')"
