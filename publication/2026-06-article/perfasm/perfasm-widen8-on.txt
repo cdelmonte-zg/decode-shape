@@ -1,0 +1,215 @@
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# JMH version: 1.37
+# VM version: JDK 25.0.3, OpenJDK 64-Bit Server VM, 25.0.3+9-2-24.04.2-Ubuntu
+# VM invoker: /usr/lib/jvm/java-25-openjdk-amd64/bin/java
+# VM options: --add-modules=jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 1 s each
+# Measurement: 3 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode
+# Parameters: (bitWidth = 8, decoder = scalar-widen)
+
+# Run progress: 0.00% complete, ETA 00:00:06
+# Fork: 1 of 1
+# Preparing profilers: LinuxPerfAsmProfiler 
+# Profilers consume stdout and stderr from target VM, use -v EXTRA to copy to console
+# Warmup Iteration   1: 5977.504 ops/us
+# Warmup Iteration   2: 5932.691 ops/us
+# Warmup Iteration   3: 5939.653 ops/us
+Iteration   1: 5796.387 ops/us
+Iteration   2: 5885.138 ops/us
+Iteration   3: 5895.436 ops/us
+# Processing profiler results: LinuxPerfAsmProfiler 
+
+
+Result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode":
+  5858.987 ±(99.9%) 993.507 ops/us [Average]
+  (min, avg, max) = (5796.387, 5858.987, 5895.436), stdev = 54.457
+  CI (99.9%): [4865.480, 6852.493] (assumes normal distribution)
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:asm":
+PrintAssembly processed: 253071 total address lines.
+Perf output processed (skipped 5.776 seconds):
+ Column 1: cycles (2527 events)
+
+Hottest code regions (>10.00% "cycles" events):
+ Event counts are percents of total event count.
+
+....[Hottest Region 1]..............................................................................
+c2, level 4, dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub, version 4, compile id 966 
+
+             0x00007f6e3c228e4f:   vmovq		%r8, %xmm1
+             0x00007f6e3c228e54:   vmovq		%r9, %xmm2
+             0x00007f6e3c228e59:   vmovq		%rbx, %xmm8
+             0x00007f6e3c228e5e:   vmovd		%r11d, %xmm11
+             0x00007f6e3c228e63:   movl		%r10d, 0x50(%rsp)   ;   {other}
+             0x00007f6e3c228e68:   nopl		(%rax, %rax)        ;*aload {reexecute=0 rethrow=0 return_oop=0}
+                                                                       ; - dev.cdelmonte.decodeshape.phase1.ScalarWidenDecoder::decode@37 (line 32)
+                                                                       ; - dev.cdelmonte.decodeshape.bench.Phase1UnpackBench::decode@51 (line 142)
+                                                                       ; - dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub@17 (line 122)
+          ↗  0x00007f6e3c228e70:   vmovd		%ecx, %xmm3
+   0.04%  │  0x00007f6e3c228e74:   movslq		%ecx, %r13          ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+          │                                                            ; - dev.cdelmonte.decodeshape.phase1.ScalarWidenDecoder::decode@49 (line 32)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.Phase1UnpackBench::decode@51 (line 142)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub@17 (line 122)
+   0.04%  │  0x00007f6e3c228e77:   movzbl		0x10(%rdx, %r13), %r11d;*iand {reexecute=0 rethrow=0 return_oop=0}
+          │                                                            ; - dev.cdelmonte.decodeshape.phase1.ScalarWidenDecoder::decode@48 (line 32)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.Phase1UnpackBench::decode@51 (line 142)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub@17 (line 122)
+   8.82%  │  0x00007f6e3c228e7d:   movl		%r11d, 0x10(%rax, %r13, 4)
+          │                                                            ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+          │                                                            ; - dev.cdelmonte.decodeshape.phase1.ScalarWidenDecoder::decode@49 (line 32)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.Phase1UnpackBench::decode@51 (line 142)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub@17 (line 122)
+          │  0x00007f6e3c228e82:   movzbl		0x1f(%rdx, %r13), %r10d
+   0.04%  │  0x00007f6e3c228e88:   vmovd		%r10d, %xmm5
+   0.04%  │  0x00007f6e3c228e8d:   movzbl		0x1e(%rdx, %r13), %r10d
+   0.08%  │  0x00007f6e3c228e93:   vmovd		%r10d, %xmm4
+          │  0x00007f6e3c228e98:   movzbl		0x1d(%rdx, %r13), %r10d
+          │  0x00007f6e3c228e9e:   vmovd		%r10d, %xmm7
+   0.04%  │  0x00007f6e3c228ea3:   movzbl		0x1c(%rdx, %r13), %r10d
+   0.04%  │  0x00007f6e3c228ea9:   vmovd		%r10d, %xmm6
+          │  0x00007f6e3c228eae:   movzbl		0x1b(%rdx, %r13), %r10d
+   0.08%  │  0x00007f6e3c228eb4:   vmovd		%r10d, %xmm9
+   0.04%  │  0x00007f6e3c228eb9:   movzbl		0x1a(%rdx, %r13), %r14d
+          │  0x00007f6e3c228ebf:   movzbl		0x19(%rdx, %r13), %r10d
+          │  0x00007f6e3c228ec5:   movzbl		0x18(%rdx, %r13), %r8d
+   0.04%  │  0x00007f6e3c228ecb:   movzbl		0x17(%rdx, %r13), %r11d
+          │  0x00007f6e3c228ed1:   movzbl		0x16(%rdx, %r13), %ecx
+   3.01%  │  0x00007f6e3c228ed7:   movzbl		0x15(%rdx, %r13), %r9d
+          │  0x00007f6e3c228edd:   movzbl		0x14(%rdx, %r13), %edi
+   0.12%  │  0x00007f6e3c228ee3:   movzbl		0x13(%rdx, %r13), %ebx
+          │  0x00007f6e3c228ee9:   movzbl		0x12(%rdx, %r13), %ebp
+          │  0x00007f6e3c228eef:   movzbl		0x11(%rdx, %r13), %esi;*iand {reexecute=0 rethrow=0 return_oop=0}
+          │                                                            ; - dev.cdelmonte.decodeshape.phase1.ScalarWidenDecoder::decode@48 (line 32)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.Phase1UnpackBench::decode@51 (line 142)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub@17 (line 122)
+   0.04%  │  0x00007f6e3c228ef5:   movl		%esi, 0x14(%rax, %r13, 4)
+   0.08%  │  0x00007f6e3c228efa:   movl		%ebp, 0x18(%rax, %r13, 4)
+          │  0x00007f6e3c228eff:   movl		%ebx, 0x1c(%rax, %r13, 4)
+   6.73%  │  0x00007f6e3c228f04:   movl		%edi, 0x20(%rax, %r13, 4)
+   0.04%  │  0x00007f6e3c228f09:   movl		%r9d, 0x24(%rax, %r13, 4)
+          │  0x00007f6e3c228f0e:   movl		%ecx, 0x28(%rax, %r13, 4)
+   7.44%  │  0x00007f6e3c228f13:   movl		%r11d, 0x2c(%rax, %r13, 4)
+   0.08%  │  0x00007f6e3c228f18:   movl		%r8d, 0x30(%rax, %r13, 4)
+          │  0x00007f6e3c228f1d:   movl		%r10d, 0x34(%rax, %r13, 4)
+  11.40%  │  0x00007f6e3c228f22:   movl		%r14d, 0x38(%rax, %r13, 4)
+          │  0x00007f6e3c228f27:   vmovd		%xmm9, %r10d
+          │  0x00007f6e3c228f2c:   movl		%r10d, 0x3c(%rax, %r13, 4)
+  10.92%  │  0x00007f6e3c228f31:   vmovd		%xmm6, %r10d
+          │  0x00007f6e3c228f36:   movl		%r10d, 0x40(%rax, %r13, 4)
+   4.00%  │  0x00007f6e3c228f3b:   vmovd		%xmm7, %r10d
+   0.04%  │  0x00007f6e3c228f40:   movl		%r10d, 0x44(%rax, %r13, 4)
+   6.69%  │  0x00007f6e3c228f45:   vmovd		%xmm4, %r10d
+          │  0x00007f6e3c228f4a:   movl		%r10d, 0x48(%rax, %r13, 4)
+   8.03%  │  0x00007f6e3c228f4f:   vmovd		%xmm5, %r10d
+          │  0x00007f6e3c228f54:   movl		%r10d, 0x4c(%rax, %r13, 4)
+          │                                                            ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+          │                                                            ; - dev.cdelmonte.decodeshape.phase1.ScalarWidenDecoder::decode@49 (line 32)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.Phase1UnpackBench::decode@51 (line 142)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub@17 (line 122)
+   1.15%  │  0x00007f6e3c228f59:   vmovd		%xmm3, %ecx
+          │  0x00007f6e3c228f5d:   addl		$0x10, %ecx         ;*iinc {reexecute=0 rethrow=0 return_oop=0}
+          │                                                            ; - dev.cdelmonte.decodeshape.phase1.ScalarWidenDecoder::decode@50 (line 31)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.Phase1UnpackBench::decode@51 (line 142)
+          │                                                            ; - dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub@17 (line 122)
+  17.89%  │  0x00007f6e3c228f60:   cmpl		0x50(%rsp), %ecx    ;   {other}
+   9.85%  ╰  0x00007f6e3c228f64:   jl		0x7f6e3c228e70      ;*goto {reexecute=0 rethrow=0 return_oop=0}
+                                                                       ; - dev.cdelmonte.decodeshape.phase1.ScalarWidenDecoder::decode@53 (line 31)
+                                                                       ; - dev.cdelmonte.decodeshape.bench.Phase1UnpackBench::decode@51 (line 142)
+                                                                       ; - dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub@17 (line 122)
+             0x00007f6e3c228f6a:   movq		0x30(%r15), %r10    ; ImmutableOopMap {rdx=Oop rax=Oop xmm0=Oop xmm1=Oop xmm2=Oop xmm11=NarrowOop [88]=Oop }
+                                                                       ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                                                                       ; - (reexecute) dev.cdelmonte.decodeshape.phase1.ScalarWidenDecoder::decode@53 (line 31)
+                                                                       ; - dev.cdelmonte.decodeshape.bench.Phase1UnpackBench::decode@51 (line 142)
+                                                                       ; - dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub@17 (line 122)
+             0x00007f6e3c228f6e:   testl		%eax, (%r10)        ;*goto {reexecute=0 rethrow=0 return_oop=0}
+                                                                       ; - dev.cdelmonte.decodeshape.phase1.ScalarWidenDecoder::decode@53 (line 31)
+....................................................................................................
+  96.79%  <total for region 1>
+
+....[Hottest Regions]...............................................................................
+  96.79%         c2, level 4  dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub, version 4, compile id 966 
+   0.36%   [kernel.kallsyms]  __perf_event_task_sched_in 
+   0.32%   [kernel.kallsyms]  __rcu_read_unlock 
+   0.32%                      <unknown> 
+   0.32%   [kernel.kallsyms]  perf_ctx_enable 
+   0.24%   [kernel.kallsyms]  perf_ctx_unlock 
+   0.24%   [kernel.kallsyms]  _raw_spin_unlock 
+   0.16%   [kernel.kallsyms]  srso_alias_safe_ret 
+   0.16%           libjvm.so  ElfSymbolTable::lookup(unsigned char*, int*, int*, int*, ElfFuncDescTable*) 
+   0.08%   [kernel.kallsyms]  futex_unqueue 
+   0.08%   [kernel.kallsyms]  native_queued_spin_lock_slowpath 
+   0.04%   [kernel.kallsyms]  read_tsc 
+   0.04%   [kernel.kallsyms]  xfd_validate_state 
+   0.04%   [kernel.kallsyms]  get_signal 
+   0.04%   [kernel.kallsyms]  finish_task_switch.isra.0 
+   0.04%   [kernel.kallsyms]  sched_clock_cpu 
+   0.04%   [kernel.kallsyms]  __hrtimer_next_event_base 
+   0.04%   [kernel.kallsyms]  hrtimer_try_to_cancel.part.0 
+   0.04%   [kernel.kallsyms]  hrtimer_cancel 
+   0.04%   [kernel.kallsyms]  filemap_get_folios_tag 
+   0.55%  <...other 14 warm regions...>
+....................................................................................................
+  99.96%  <totals>
+
+....[Hottest Methods (after inlining)]..............................................................
+  96.83%         c2, level 4  dev.cdelmonte.decodeshape.bench.jmh_generated.Phase1UnpackBench_decode_jmhTest::decode_thrpt_jmhStub, version 4, compile id 966 
+   0.36%   [kernel.kallsyms]  __perf_event_task_sched_in 
+   0.32%   [kernel.kallsyms]  __rcu_read_unlock 
+   0.32%                      <unknown> 
+   0.32%   [kernel.kallsyms]  perf_ctx_enable 
+   0.24%   [kernel.kallsyms]  perf_ctx_unlock 
+   0.24%   [kernel.kallsyms]  _raw_spin_unlock 
+   0.16%           libjvm.so  ElfSymbolTable::lookup(unsigned char*, int*, int*, int*, ElfFuncDescTable*) 
+   0.16%   [kernel.kallsyms]  srso_alias_safe_ret 
+   0.08%   [kernel.kallsyms]  futex_unqueue 
+   0.08%   [kernel.kallsyms]  native_queued_spin_lock_slowpath 
+   0.04%         interpreter  getstatic  178 getstatic  
+   0.04%   [kernel.kallsyms]  __lruvec_stat_mod_folio 
+   0.04%   [kernel.kallsyms]  read_tsc 
+   0.04%           libc.so.6  _int_malloc 
+   0.04%   [kernel.kallsyms]  obj_cgroup_uncharge_pages 
+   0.04%           libjvm.so  fileStream::write(char const*, unsigned long) 
+   0.04%   [kernel.kallsyms]  finish_task_switch.isra.0 
+   0.04%   [kernel.kallsyms]  irqentry_exit_to_user_mode 
+   0.04%   [kernel.kallsyms]  __mt_destroy 
+   0.51%  <...other 13 warm methods...>
+....................................................................................................
+  99.96%  <totals>
+
+....[Distribution by Source]........................................................................
+  96.83%         c2, level 4
+   2.41%   [kernel.kallsyms]
+   0.32%                    
+   0.32%           libjvm.so
+   0.04%         interpreter
+   0.04%           libc.so.6
+....................................................................................................
+  99.96%  <totals>
+
+
+
+# Run complete. Total time: 00:00:10
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                     (bitWidth)     (decoder)   Mode  Cnt     Score     Error   Units
+Phase1UnpackBench.decode               8  scalar-widen  thrpt    3  5858.987 ± 993.507  ops/us
+Phase1UnpackBench.decode:asm           8  scalar-widen  thrpt            NaN               ---

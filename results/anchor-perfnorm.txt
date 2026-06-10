@@ -1,0 +1,1400 @@
+WARNING: Using incubator modules: jdk.incubator.vector
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/home/sp4/Workspace/decode-shape/target/benchmarks.jar)
+WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+# JMH version: 1.37
+# VM version: JDK 25.0.3, OpenJDK 64-Bit Server VM, 25.0.3+9-2-24.04.2-Ubuntu
+# VM invoker: /usr/lib/jvm/java-25-openjdk-amd64/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules=jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 2 iterations, 1 s each
+# Measurement: 3 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode
+# Parameters: (bitWidth = 5, decoder = scalar-array)
+
+# Run progress: 0.00% complete, ETA 00:01:15
+# Fork: 1 of 1
+# Preparing profilers: LinuxPerfNormProfiler 
+# Profilers consume stderr from target VM, use -v EXTRA to copy to console
+# Warmup Iteration   1: 2167.042 ops/us
+# Warmup Iteration   2: 2182.353 ops/us
+Iteration   1: 2190.899 ops/us
+Iteration   2: 2172.254 ops/us
+Iteration   3: 1991.129 ops/us
+# Processing profiler results: LinuxPerfNormProfiler 
+
+
+Result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode":
+  2118.094 ±(99.9%) 2013.179 ops/us [Average]
+  (min, avg, max) = (1991.129, 2118.094, 2190.899), stdev = 110.349
+  CI (99.9%): [104.915, 4131.273] (assumes normal distribution)
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:CPI":
+  0.172 clks/insn
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:IPC":
+  5.830 insns/clk
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-dcache-load-misses":
+  0.073 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-dcache-loads":
+  2.922 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-icache-load-misses":
+  ≈ 10⁻⁵ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-icache-loads":
+  0.004 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:branch-misses":
+  0.001 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:branches":
+  1.261 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:cycles":
+  2.611 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:dTLB-load-misses":
+  ≈ 10⁻⁵ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:dTLB-loads":
+  0.001 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:iTLB-load-misses":
+  ≈ 10⁻⁶ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:iTLB-loads":
+  ≈ 10⁻⁵ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:instructions":
+  15.222 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:stalled-cycles-frontend":
+  0.013 #/op
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.3, OpenJDK 64-Bit Server VM, 25.0.3+9-2-24.04.2-Ubuntu
+# VM invoker: /usr/lib/jvm/java-25-openjdk-amd64/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules=jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 2 iterations, 1 s each
+# Measurement: 3 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode
+# Parameters: (bitWidth = 5, decoder = parquet-scalar)
+
+# Run progress: 6.67% complete, ETA 00:01:16
+# Fork: 1 of 1
+# Preparing profilers: LinuxPerfNormProfiler 
+# Profilers consume stderr from target VM, use -v EXTRA to copy to console
+# Warmup Iteration   1: 2784.168 ops/us
+# Warmup Iteration   2: 2860.706 ops/us
+Iteration   1: 2851.879 ops/us
+Iteration   2: 3035.666 ops/us
+Iteration   3: 3035.279 ops/us
+# Processing profiler results: LinuxPerfNormProfiler 
+
+
+Result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode":
+  2974.275 ±(99.9%) 1933.802 ops/us [Average]
+  (min, avg, max) = (2851.879, 2974.275, 3035.666), stdev = 105.998
+  CI (99.9%): [1040.472, 4908.077] (assumes normal distribution)
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:CPI":
+  0.225 clks/insn
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:IPC":
+  4.436 insns/clk
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-dcache-load-misses":
+  0.073 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-dcache-loads":
+  2.161 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-icache-load-misses":
+  ≈ 10⁻⁵ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-icache-loads":
+  0.003 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:branch-misses":
+  ≈ 10⁻³ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:branches":
+  0.380 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:cycles":
+  1.857 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:dTLB-load-misses":
+  ≈ 10⁻⁵ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:dTLB-loads":
+  0.001 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:iTLB-load-misses":
+  ≈ 10⁻⁶ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:iTLB-loads":
+  ≈ 10⁻⁵ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:instructions":
+  8.237 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:stalled-cycles-frontend":
+  0.009 #/op
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.3, OpenJDK 64-Bit Server VM, 25.0.3+9-2-24.04.2-Ubuntu
+# VM invoker: /usr/lib/jvm/java-25-openjdk-amd64/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules=jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 2 iterations, 1 s each
+# Measurement: 3 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode
+# Parameters: (bitWidth = 5, decoder = vector-segment)
+
+# Run progress: 13.33% complete, ETA 00:01:14
+# Fork: 1 of 1
+# Preparing profilers: LinuxPerfNormProfiler 
+# Profilers consume stderr from target VM, use -v EXTRA to copy to console
+# Warmup Iteration   1: 7729.494 ops/us
+# Warmup Iteration   2: 7822.170 ops/us
+Iteration   1: 9734.941 ops/us
+Iteration   2: 9753.163 ops/us
+Iteration   3: 9717.209 ops/us
+# Processing profiler results: LinuxPerfNormProfiler 
+
+
+Result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode":
+  9735.104 ±(99.9%) 327.978 ops/us [Average]
+  (min, avg, max) = (9717.209, 9735.104, 9753.163), stdev = 17.978
+  CI (99.9%): [9407.126, 10063.082] (assumes normal distribution)
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:CPI":
+  0.360 clks/insn
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:IPC":
+  2.775 insns/clk
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-dcache-load-misses":
+  0.074 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-dcache-loads":
+  0.897 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-icache-load-misses":
+  ≈ 10⁻⁶ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-icache-loads":
+  0.001 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:branch-misses":
+  ≈ 10⁻⁴ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:branches":
+  0.188 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:cycles":
+  0.565 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:dTLB-load-misses":
+  ≈ 10⁻⁶ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:dTLB-loads":
+  0.001 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:iTLB-load-misses":
+  ≈ 10⁻⁸ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:iTLB-loads":
+  ≈ 10⁻⁷ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:instructions":
+  1.567 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:stalled-cycles-frontend":
+  0.006 #/op
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.3, OpenJDK 64-Bit Server VM, 25.0.3+9-2-24.04.2-Ubuntu
+# VM invoker: /usr/lib/jvm/java-25-openjdk-amd64/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules=jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 2 iterations, 1 s each
+# Measurement: 3 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode
+# Parameters: (bitWidth = 9, decoder = scalar-array)
+
+# Run progress: 20.00% complete, ETA 00:01:09
+# Fork: 1 of 1
+# Preparing profilers: LinuxPerfNormProfiler 
+# Profilers consume stderr from target VM, use -v EXTRA to copy to console
+# Warmup Iteration   1: 2142.673 ops/us
+# Warmup Iteration   2: 2186.104 ops/us
+Iteration   1: 2187.990 ops/us
+Iteration   2: 2171.075 ops/us
+Iteration   3: 1985.139 ops/us
+# Processing profiler results: LinuxPerfNormProfiler 
+
+
+Result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode":
+  2114.735 ±(99.9%) 2053.360 ops/us [Average]
+  (min, avg, max) = (1985.139, 2114.735, 2187.990), stdev = 112.552
+  CI (99.9%): [61.374, 4168.095] (assumes normal distribution)
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:CPI":
+  0.172 clks/insn
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:IPC":
+  5.824 insns/clk
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-dcache-load-misses":
+  0.081 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-dcache-loads":
+  2.924 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-icache-load-misses":
+  ≈ 10⁻⁵ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-icache-loads":
+  0.004 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:branch-misses":
+  0.001 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:branches":
+  1.261 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:cycles":
+  2.612 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:dTLB-load-misses":
+  ≈ 10⁻⁵ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:dTLB-loads":
+  0.001 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:iTLB-load-misses":
+  ≈ 10⁻⁶ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:iTLB-loads":
+  ≈ 10⁻⁵ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:instructions":
+  15.215 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:stalled-cycles-frontend":
+  0.013 #/op
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.3, OpenJDK 64-Bit Server VM, 25.0.3+9-2-24.04.2-Ubuntu
+# VM invoker: /usr/lib/jvm/java-25-openjdk-amd64/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules=jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 2 iterations, 1 s each
+# Measurement: 3 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode
+# Parameters: (bitWidth = 9, decoder = parquet-scalar)
+
+# Run progress: 26.67% complete, ETA 00:01:03
+# Fork: 1 of 1
+# Preparing profilers: LinuxPerfNormProfiler 
+# Profilers consume stderr from target VM, use -v EXTRA to copy to console
+# Warmup Iteration   1: 2283.080 ops/us
+# Warmup Iteration   2: 2299.439 ops/us
+Iteration   1: 2178.945 ops/us
+Iteration   2: 2204.450 ops/us
+Iteration   3: 2317.137 ops/us
+# Processing profiler results: LinuxPerfNormProfiler 
+
+
+Result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode":
+  2233.511 ±(99.9%) 1341.586 ops/us [Average]
+  (min, avg, max) = (2178.945, 2233.511, 2317.137), stdev = 73.537
+  CI (99.9%): [891.924, 3575.097] (assumes normal distribution)
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:CPI":
+  0.225 clks/insn
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:IPC":
+  4.435 insns/clk
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-dcache-load-misses":
+  0.081 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-dcache-loads":
+  2.611 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-icache-load-misses":
+  ≈ 10⁻⁵ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-icache-loads":
+  0.004 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:branch-misses":
+  ≈ 10⁻³ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:branches":
+  0.381 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:cycles":
+  2.485 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:dTLB-load-misses":
+  ≈ 10⁻⁵ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:dTLB-loads":
+  0.002 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:iTLB-load-misses":
+  ≈ 10⁻⁶ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:iTLB-loads":
+  ≈ 10⁻⁵ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:instructions":
+  11.022 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:stalled-cycles-frontend":
+  0.011 #/op
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.3, OpenJDK 64-Bit Server VM, 25.0.3+9-2-24.04.2-Ubuntu
+# VM invoker: /usr/lib/jvm/java-25-openjdk-amd64/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules=jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 2 iterations, 1 s each
+# Measurement: 3 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode
+# Parameters: (bitWidth = 9, decoder = vector-segment)
+
+# Run progress: 33.33% complete, ETA 00:00:58
+# Fork: 1 of 1
+# Preparing profilers: LinuxPerfNormProfiler 
+# Profilers consume stderr from target VM, use -v EXTRA to copy to console
+# Warmup Iteration   1: 7814.331 ops/us
+# Warmup Iteration   2: 7897.537 ops/us
+Iteration   1: 10121.177 ops/us
+Iteration   2: 10132.887 ops/us
+Iteration   3: 10113.909 ops/us
+# Processing profiler results: LinuxPerfNormProfiler 
+
+
+Result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode":
+  10122.658 ±(99.9%) 174.689 ops/us [Average]
+  (min, avg, max) = (10113.909, 10122.658, 10132.887), stdev = 9.575
+  CI (99.9%): [9947.969, 10297.347] (assumes normal distribution)
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:CPI":
+  0.345 clks/insn
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:IPC":
+  2.901 insns/clk
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-dcache-load-misses":
+  0.082 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-dcache-loads":
+  0.964 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-icache-load-misses":
+  ≈ 10⁻⁶ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-icache-loads":
+  0.001 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:branch-misses":
+  ≈ 10⁻⁴ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:branches":
+  0.189 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:cycles":
+  0.541 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:dTLB-load-misses":
+  ≈ 10⁻⁶ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:dTLB-loads":
+  0.001 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:iTLB-load-misses":
+  ≈ 10⁻⁶ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:iTLB-loads":
+  ≈ 10⁻⁶ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:instructions":
+  1.568 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:stalled-cycles-frontend":
+  0.006 #/op
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.3, OpenJDK 64-Bit Server VM, 25.0.3+9-2-24.04.2-Ubuntu
+# VM invoker: /usr/lib/jvm/java-25-openjdk-amd64/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules=jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 2 iterations, 1 s each
+# Measurement: 3 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode
+# Parameters: (bitWidth = 13, decoder = scalar-array)
+
+# Run progress: 40.00% complete, ETA 00:00:52
+# Fork: 1 of 1
+# Preparing profilers: LinuxPerfNormProfiler 
+# Profilers consume stderr from target VM, use -v EXTRA to copy to console
+# Warmup Iteration   1: 2165.690 ops/us
+# Warmup Iteration   2: 2185.131 ops/us
+Iteration   1: 2193.792 ops/us
+Iteration   2: 2171.990 ops/us
+Iteration   3: 1987.281 ops/us
+# Processing profiler results: LinuxPerfNormProfiler 
+
+
+Result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode":
+  2117.688 ±(99.9%) 2069.942 ops/us [Average]
+  (min, avg, max) = (1987.281, 2117.688, 2193.792), stdev = 113.461
+  CI (99.9%): [47.746, 4187.630] (assumes normal distribution)
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:CPI":
+  0.172 clks/insn
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:IPC":
+  5.818 insns/clk
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-dcache-load-misses":
+  0.089 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-dcache-loads":
+  2.919 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-icache-load-misses":
+  ≈ 10⁻⁵ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-icache-loads":
+  0.004 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:branch-misses":
+  0.001 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:branches":
+  1.258 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:cycles":
+  2.612 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:dTLB-load-misses":
+  ≈ 10⁻⁵ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:dTLB-loads":
+  0.002 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:iTLB-load-misses":
+  ≈ 10⁻⁶ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:iTLB-loads":
+  ≈ 10⁻⁵ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:instructions":
+  15.195 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:stalled-cycles-frontend":
+  0.013 #/op
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.3, OpenJDK 64-Bit Server VM, 25.0.3+9-2-24.04.2-Ubuntu
+# VM invoker: /usr/lib/jvm/java-25-openjdk-amd64/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules=jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 2 iterations, 1 s each
+# Measurement: 3 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode
+# Parameters: (bitWidth = 13, decoder = parquet-scalar)
+
+# Run progress: 46.67% complete, ETA 00:00:46
+# Fork: 1 of 1
+# Preparing profilers: LinuxPerfNormProfiler 
+# Profilers consume stderr from target VM, use -v EXTRA to copy to console
+# Warmup Iteration   1: 1804.752 ops/us
+# Warmup Iteration   2: 1860.154 ops/us
+Iteration   1: 1688.731 ops/us
+Iteration   2: 1678.377 ops/us
+Iteration   3: 1824.296 ops/us
+# Processing profiler results: LinuxPerfNormProfiler 
+
+
+Result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode":
+  1730.468 ±(99.9%) 1485.443 ops/us [Average]
+  (min, avg, max) = (1678.377, 1730.468, 1824.296), stdev = 81.422
+  CI (99.9%): [245.025, 3215.911] (assumes normal distribution)
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:CPI":
+  0.231 clks/insn
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:IPC":
+  4.330 insns/clk
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-dcache-load-misses":
+  0.089 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-dcache-loads":
+  3.172 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-icache-load-misses":
+  ≈ 10⁻⁵ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-icache-loads":
+  0.005 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:branch-misses":
+  0.001 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:branches":
+  0.385 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:cycles":
+  3.205 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:dTLB-load-misses":
+  ≈ 10⁻⁵ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:dTLB-loads":
+  0.002 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:iTLB-load-misses":
+  ≈ 10⁻⁵ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:iTLB-loads":
+  ≈ 10⁻⁵ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:instructions":
+  13.877 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:stalled-cycles-frontend":
+  0.016 #/op
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.3, OpenJDK 64-Bit Server VM, 25.0.3+9-2-24.04.2-Ubuntu
+# VM invoker: /usr/lib/jvm/java-25-openjdk-amd64/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules=jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 2 iterations, 1 s each
+# Measurement: 3 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode
+# Parameters: (bitWidth = 13, decoder = vector-segment)
+
+# Run progress: 53.33% complete, ETA 00:00:40
+# Fork: 1 of 1
+# Preparing profilers: LinuxPerfNormProfiler 
+# Profilers consume stderr from target VM, use -v EXTRA to copy to console
+# Warmup Iteration   1: 7703.287 ops/us
+# Warmup Iteration   2: 7697.196 ops/us
+Iteration   1: 9519.217 ops/us
+Iteration   2: 9517.086 ops/us
+Iteration   3: 9515.081 ops/us
+# Processing profiler results: LinuxPerfNormProfiler 
+
+
+Result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode":
+  9517.128 ±(99.9%) 37.742 ops/us [Average]
+  (min, avg, max) = (9515.081, 9517.128, 9519.217), stdev = 2.069
+  CI (99.9%): [9479.387, 9554.870] (assumes normal distribution)
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:CPI":
+  0.369 clks/insn
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:IPC":
+  2.710 insns/clk
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-dcache-load-misses":
+  0.090 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-dcache-loads":
+  0.896 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-icache-load-misses":
+  ≈ 10⁻⁶ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-icache-loads":
+  0.001 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:branch-misses":
+  ≈ 10⁻⁴ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:branches":
+  0.188 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:cycles":
+  0.578 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:dTLB-load-misses":
+  ≈ 10⁻⁶ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:dTLB-loads":
+  0.002 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:iTLB-load-misses":
+  ≈ 10⁻⁷ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:iTLB-loads":
+  ≈ 10⁻⁷ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:instructions":
+  1.566 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:stalled-cycles-frontend":
+  0.006 #/op
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.3, OpenJDK 64-Bit Server VM, 25.0.3+9-2-24.04.2-Ubuntu
+# VM invoker: /usr/lib/jvm/java-25-openjdk-amd64/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules=jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 2 iterations, 1 s each
+# Measurement: 3 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode
+# Parameters: (bitWidth = 17, decoder = scalar-array)
+
+# Run progress: 60.00% complete, ETA 00:00:35
+# Fork: 1 of 1
+# Preparing profilers: LinuxPerfNormProfiler 
+# Profilers consume stderr from target VM, use -v EXTRA to copy to console
+# Warmup Iteration   1: 2162.399 ops/us
+# Warmup Iteration   2: 2181.263 ops/us
+Iteration   1: 2191.486 ops/us
+Iteration   2: 2182.621 ops/us
+Iteration   3: 1982.648 ops/us
+# Processing profiler results: LinuxPerfNormProfiler 
+
+
+Result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode":
+  2118.918 ±(99.9%) 2154.524 ops/us [Average]
+  (min, avg, max) = (1982.648, 2118.918, 2191.486), stdev = 118.097
+  CI (99.9%): [≈ 0, 4273.442] (assumes normal distribution)
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:CPI":
+  0.172 clks/insn
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:IPC":
+  5.830 insns/clk
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-dcache-load-misses":
+  0.097 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-dcache-loads":
+  2.925 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-icache-load-misses":
+  ≈ 10⁻⁵ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-icache-loads":
+  0.004 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:branch-misses":
+  0.001 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:branches":
+  1.261 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:cycles":
+  2.610 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:dTLB-load-misses":
+  ≈ 10⁻⁵ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:dTLB-loads":
+  0.002 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:iTLB-load-misses":
+  ≈ 10⁻⁶ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:iTLB-loads":
+  ≈ 10⁻⁵ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:instructions":
+  15.214 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:stalled-cycles-frontend":
+  0.012 #/op
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.3, OpenJDK 64-Bit Server VM, 25.0.3+9-2-24.04.2-Ubuntu
+# VM invoker: /usr/lib/jvm/java-25-openjdk-amd64/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules=jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 2 iterations, 1 s each
+# Measurement: 3 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode
+# Parameters: (bitWidth = 17, decoder = parquet-scalar)
+
+# Run progress: 66.67% complete, ETA 00:00:29
+# Fork: 1 of 1
+# Preparing profilers: LinuxPerfNormProfiler 
+# Profilers consume stderr from target VM, use -v EXTRA to copy to console
+# Warmup Iteration   1: 1265.969 ops/us
+# Warmup Iteration   2: 1287.621 ops/us
+Iteration   1: 1287.714 ops/us
+Iteration   2: 1260.685 ops/us
+Iteration   3: 1243.572 ops/us
+# Processing profiler results: LinuxPerfNormProfiler 
+
+
+Result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode":
+  1263.990 ±(99.9%) 406.036 ops/us [Average]
+  (min, avg, max) = (1243.572, 1263.990, 1287.714), stdev = 22.256
+  CI (99.9%): [857.954, 1670.027] (assumes normal distribution)
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:CPI":
+  0.238 clks/insn
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:IPC":
+  4.208 insns/clk
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-dcache-load-misses":
+  0.097 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-dcache-loads":
+  5.130 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-icache-load-misses":
+  ≈ 10⁻⁵ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-icache-loads":
+  0.007 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:branch-misses":
+  0.001 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:branches":
+  1.131 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:cycles":
+  4.351 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:dTLB-load-misses":
+  ≈ 10⁻⁵ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:dTLB-loads":
+  0.002 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:iTLB-load-misses":
+  ≈ 10⁻⁵ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:iTLB-loads":
+  ≈ 10⁻⁵ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:instructions":
+  18.311 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:stalled-cycles-frontend":
+  0.013 #/op
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.3, OpenJDK 64-Bit Server VM, 25.0.3+9-2-24.04.2-Ubuntu
+# VM invoker: /usr/lib/jvm/java-25-openjdk-amd64/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules=jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 2 iterations, 1 s each
+# Measurement: 3 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode
+# Parameters: (bitWidth = 17, decoder = vector-segment)
+
+# Run progress: 73.33% complete, ETA 00:00:23
+# Fork: 1 of 1
+# Preparing profilers: LinuxPerfNormProfiler 
+# Profilers consume stderr from target VM, use -v EXTRA to copy to console
+# Warmup Iteration   1: 7694.697 ops/us
+# Warmup Iteration   2: 7783.019 ops/us
+Iteration   1: 9778.534 ops/us
+Iteration   2: 9785.326 ops/us
+Iteration   3: 9778.220 ops/us
+# Processing profiler results: LinuxPerfNormProfiler 
+
+
+Result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode":
+  9780.693 ±(99.9%) 73.252 ops/us [Average]
+  (min, avg, max) = (9778.220, 9780.693, 9785.326), stdev = 4.015
+  CI (99.9%): [9707.441, 9853.946] (assumes normal distribution)
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:CPI":
+  0.357 clks/insn
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:IPC":
+  2.803 insns/clk
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-dcache-load-misses":
+  0.097 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-dcache-loads":
+  0.900 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-icache-load-misses":
+  ≈ 10⁻⁶ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-icache-loads":
+  0.001 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:branch-misses":
+  ≈ 10⁻⁴ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:branches":
+  0.188 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:cycles":
+  0.560 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:dTLB-load-misses":
+  ≈ 10⁻⁶ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:dTLB-loads":
+  0.002 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:iTLB-load-misses":
+  ≈ 10⁻⁷ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:iTLB-loads":
+  ≈ 10⁻⁶ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:instructions":
+  1.569 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:stalled-cycles-frontend":
+  0.007 #/op
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.3, OpenJDK 64-Bit Server VM, 25.0.3+9-2-24.04.2-Ubuntu
+# VM invoker: /usr/lib/jvm/java-25-openjdk-amd64/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules=jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 2 iterations, 1 s each
+# Measurement: 3 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode
+# Parameters: (bitWidth = 26, decoder = scalar-array)
+
+# Run progress: 80.00% complete, ETA 00:00:17
+# Fork: 1 of 1
+# Preparing profilers: LinuxPerfNormProfiler 
+# Profilers consume stderr from target VM, use -v EXTRA to copy to console
+# Warmup Iteration   1: 2146.538 ops/us
+# Warmup Iteration   2: 2166.994 ops/us
+Iteration   1: 2189.410 ops/us
+Iteration   2: 2183.376 ops/us
+Iteration   3: 1980.264 ops/us
+# Processing profiler results: LinuxPerfNormProfiler 
+
+
+Result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode":
+  2117.683 ±(99.9%) 2171.858 ops/us [Average]
+  (min, avg, max) = (1980.264, 2117.683, 2189.410), stdev = 119.047
+  CI (99.9%): [≈ 0, 4289.541] (assumes normal distribution)
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:CPI":
+  0.172 clks/insn
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:IPC":
+  5.823 insns/clk
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-dcache-load-misses":
+  0.115 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-dcache-loads":
+  2.923 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-icache-load-misses":
+  ≈ 10⁻⁵ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-icache-loads":
+  0.004 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:branch-misses":
+  0.001 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:branches":
+  1.260 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:cycles":
+  2.610 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:dTLB-load-misses":
+  ≈ 10⁻⁵ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:dTLB-loads":
+  0.002 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:iTLB-load-misses":
+  ≈ 10⁻⁶ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:iTLB-loads":
+  ≈ 10⁻⁶ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:instructions":
+  15.199 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:stalled-cycles-frontend":
+  0.014 #/op
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.3, OpenJDK 64-Bit Server VM, 25.0.3+9-2-24.04.2-Ubuntu
+# VM invoker: /usr/lib/jvm/java-25-openjdk-amd64/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules=jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 2 iterations, 1 s each
+# Measurement: 3 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode
+# Parameters: (bitWidth = 26, decoder = parquet-scalar)
+
+# Run progress: 86.67% complete, ETA 00:00:11
+# Fork: 1 of 1
+# Preparing profilers: LinuxPerfNormProfiler 
+# Profilers consume stderr from target VM, use -v EXTRA to copy to console
+# Warmup Iteration   1: 992.063 ops/us
+# Warmup Iteration   2: 1008.176 ops/us
+Iteration   1: 1014.731 ops/us
+Iteration   2: 1008.464 ops/us
+Iteration   3: 1005.727 ops/us
+# Processing profiler results: LinuxPerfNormProfiler 
+
+
+Result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode":
+  1009.641 ±(99.9%) 84.216 ops/us [Average]
+  (min, avg, max) = (1005.727, 1009.641, 1014.731), stdev = 4.616
+  CI (99.9%): [925.424, 1093.857] (assumes normal distribution)
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:CPI":
+  0.240 clks/insn
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:IPC":
+  4.169 insns/clk
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-dcache-load-misses":
+  0.115 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-dcache-loads":
+  6.634 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-icache-load-misses":
+  ≈ 10⁻⁵ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-icache-loads":
+  0.008 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:branch-misses":
+  0.001 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:branches":
+  1.131 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:cycles":
+  5.457 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:dTLB-load-misses":
+  ≈ 10⁻⁶ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:dTLB-loads":
+  0.002 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:iTLB-load-misses":
+  ≈ 10⁻⁵ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:iTLB-loads":
+  ≈ 10⁻⁶ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:instructions":
+  22.752 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:stalled-cycles-frontend":
+  0.020 #/op
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.3, OpenJDK 64-Bit Server VM, 25.0.3+9-2-24.04.2-Ubuntu
+# VM invoker: /usr/lib/jvm/java-25-openjdk-amd64/bin/java
+# VM options: --add-modules=jdk.incubator.vector --add-modules=jdk.incubator.vector
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 2 iterations, 1 s each
+# Measurement: 3 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode
+# Parameters: (bitWidth = 26, decoder = vector-segment)
+
+# Run progress: 93.33% complete, ETA 00:00:05
+# Fork: 1 of 1
+# Preparing profilers: LinuxPerfNormProfiler 
+# Profilers consume stderr from target VM, use -v EXTRA to copy to console
+# Warmup Iteration   1: 6455.060 ops/us
+# Warmup Iteration   2: 6832.290 ops/us
+Iteration   1: 6814.610 ops/us
+Iteration   2: 6815.471 ops/us
+Iteration   3: 6810.260 ops/us
+# Processing profiler results: LinuxPerfNormProfiler 
+
+
+Result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode":
+  6813.447 ±(99.9%) 50.957 ops/us [Average]
+  (min, avg, max) = (6810.260, 6813.447, 6815.471), stdev = 2.793
+  CI (99.9%): [6762.490, 6864.404] (assumes normal distribution)
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:CPI":
+  0.279 clks/insn
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:IPC":
+  3.590 insns/clk
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-dcache-load-misses":
+  0.121 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-dcache-loads":
+  1.200 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-icache-load-misses":
+  ≈ 10⁻⁶ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:L1-icache-loads":
+  0.001 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:branch-misses":
+  ≈ 10⁻⁴ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:branches":
+  0.376 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:cycles":
+  0.802 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:dTLB-load-misses":
+  ≈ 10⁻⁶ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:dTLB-loads":
+  0.001 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:iTLB-load-misses":
+  ≈ 10⁻⁶ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:iTLB-loads":
+  ≈ 10⁻⁶ #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:instructions":
+  2.880 #/op
+
+Secondary result "dev.cdelmonte.decodeshape.bench.Phase1UnpackBench.decode:stalled-cycles-frontend":
+  0.004 #/op
+
+
+# Run complete. Total time: 00:01:28
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                         (bitWidth)       (decoder)   Mode  Cnt      Score      Error      Units
+Phase1UnpackBench.decode                                   5    scalar-array  thrpt    3   2118.094 ± 2013.179     ops/us
+Phase1UnpackBench.decode:CPI                               5    scalar-array  thrpt           0.172             clks/insn
+Phase1UnpackBench.decode:IPC                               5    scalar-array  thrpt           5.830             insns/clk
+Phase1UnpackBench.decode:L1-dcache-load-misses             5    scalar-array  thrpt           0.073                  #/op
+Phase1UnpackBench.decode:L1-dcache-loads                   5    scalar-array  thrpt           2.922                  #/op
+Phase1UnpackBench.decode:L1-icache-load-misses             5    scalar-array  thrpt          ≈ 10⁻⁵                  #/op
+Phase1UnpackBench.decode:L1-icache-loads                   5    scalar-array  thrpt           0.004                  #/op
+Phase1UnpackBench.decode:branch-misses                     5    scalar-array  thrpt           0.001                  #/op
+Phase1UnpackBench.decode:branches                          5    scalar-array  thrpt           1.261                  #/op
+Phase1UnpackBench.decode:cycles                            5    scalar-array  thrpt           2.611                  #/op
+Phase1UnpackBench.decode:dTLB-load-misses                  5    scalar-array  thrpt          ≈ 10⁻⁵                  #/op
+Phase1UnpackBench.decode:dTLB-loads                        5    scalar-array  thrpt           0.001                  #/op
+Phase1UnpackBench.decode:iTLB-load-misses                  5    scalar-array  thrpt          ≈ 10⁻⁶                  #/op
+Phase1UnpackBench.decode:iTLB-loads                        5    scalar-array  thrpt          ≈ 10⁻⁵                  #/op
+Phase1UnpackBench.decode:instructions                      5    scalar-array  thrpt          15.222                  #/op
+Phase1UnpackBench.decode:stalled-cycles-frontend           5    scalar-array  thrpt           0.013                  #/op
+Phase1UnpackBench.decode                                   5  parquet-scalar  thrpt    3   2974.275 ± 1933.802     ops/us
+Phase1UnpackBench.decode:CPI                               5  parquet-scalar  thrpt           0.225             clks/insn
+Phase1UnpackBench.decode:IPC                               5  parquet-scalar  thrpt           4.436             insns/clk
+Phase1UnpackBench.decode:L1-dcache-load-misses             5  parquet-scalar  thrpt           0.073                  #/op
+Phase1UnpackBench.decode:L1-dcache-loads                   5  parquet-scalar  thrpt           2.161                  #/op
+Phase1UnpackBench.decode:L1-icache-load-misses             5  parquet-scalar  thrpt          ≈ 10⁻⁵                  #/op
+Phase1UnpackBench.decode:L1-icache-loads                   5  parquet-scalar  thrpt           0.003                  #/op
+Phase1UnpackBench.decode:branch-misses                     5  parquet-scalar  thrpt          ≈ 10⁻³                  #/op
+Phase1UnpackBench.decode:branches                          5  parquet-scalar  thrpt           0.380                  #/op
+Phase1UnpackBench.decode:cycles                            5  parquet-scalar  thrpt           1.857                  #/op
+Phase1UnpackBench.decode:dTLB-load-misses                  5  parquet-scalar  thrpt          ≈ 10⁻⁵                  #/op
+Phase1UnpackBench.decode:dTLB-loads                        5  parquet-scalar  thrpt           0.001                  #/op
+Phase1UnpackBench.decode:iTLB-load-misses                  5  parquet-scalar  thrpt          ≈ 10⁻⁶                  #/op
+Phase1UnpackBench.decode:iTLB-loads                        5  parquet-scalar  thrpt          ≈ 10⁻⁵                  #/op
+Phase1UnpackBench.decode:instructions                      5  parquet-scalar  thrpt           8.237                  #/op
+Phase1UnpackBench.decode:stalled-cycles-frontend           5  parquet-scalar  thrpt           0.009                  #/op
+Phase1UnpackBench.decode                                   5  vector-segment  thrpt    3   9735.104 ±  327.978     ops/us
+Phase1UnpackBench.decode:CPI                               5  vector-segment  thrpt           0.360             clks/insn
+Phase1UnpackBench.decode:IPC                               5  vector-segment  thrpt           2.775             insns/clk
+Phase1UnpackBench.decode:L1-dcache-load-misses             5  vector-segment  thrpt           0.074                  #/op
+Phase1UnpackBench.decode:L1-dcache-loads                   5  vector-segment  thrpt           0.897                  #/op
+Phase1UnpackBench.decode:L1-icache-load-misses             5  vector-segment  thrpt          ≈ 10⁻⁶                  #/op
+Phase1UnpackBench.decode:L1-icache-loads                   5  vector-segment  thrpt           0.001                  #/op
+Phase1UnpackBench.decode:branch-misses                     5  vector-segment  thrpt          ≈ 10⁻⁴                  #/op
+Phase1UnpackBench.decode:branches                          5  vector-segment  thrpt           0.188                  #/op
+Phase1UnpackBench.decode:cycles                            5  vector-segment  thrpt           0.565                  #/op
+Phase1UnpackBench.decode:dTLB-load-misses                  5  vector-segment  thrpt          ≈ 10⁻⁶                  #/op
+Phase1UnpackBench.decode:dTLB-loads                        5  vector-segment  thrpt           0.001                  #/op
+Phase1UnpackBench.decode:iTLB-load-misses                  5  vector-segment  thrpt          ≈ 10⁻⁸                  #/op
+Phase1UnpackBench.decode:iTLB-loads                        5  vector-segment  thrpt          ≈ 10⁻⁷                  #/op
+Phase1UnpackBench.decode:instructions                      5  vector-segment  thrpt           1.567                  #/op
+Phase1UnpackBench.decode:stalled-cycles-frontend           5  vector-segment  thrpt           0.006                  #/op
+Phase1UnpackBench.decode                                   9    scalar-array  thrpt    3   2114.735 ± 2053.360     ops/us
+Phase1UnpackBench.decode:CPI                               9    scalar-array  thrpt           0.172             clks/insn
+Phase1UnpackBench.decode:IPC                               9    scalar-array  thrpt           5.824             insns/clk
+Phase1UnpackBench.decode:L1-dcache-load-misses             9    scalar-array  thrpt           0.081                  #/op
+Phase1UnpackBench.decode:L1-dcache-loads                   9    scalar-array  thrpt           2.924                  #/op
+Phase1UnpackBench.decode:L1-icache-load-misses             9    scalar-array  thrpt          ≈ 10⁻⁵                  #/op
+Phase1UnpackBench.decode:L1-icache-loads                   9    scalar-array  thrpt           0.004                  #/op
+Phase1UnpackBench.decode:branch-misses                     9    scalar-array  thrpt           0.001                  #/op
+Phase1UnpackBench.decode:branches                          9    scalar-array  thrpt           1.261                  #/op
+Phase1UnpackBench.decode:cycles                            9    scalar-array  thrpt           2.612                  #/op
+Phase1UnpackBench.decode:dTLB-load-misses                  9    scalar-array  thrpt          ≈ 10⁻⁵                  #/op
+Phase1UnpackBench.decode:dTLB-loads                        9    scalar-array  thrpt           0.001                  #/op
+Phase1UnpackBench.decode:iTLB-load-misses                  9    scalar-array  thrpt          ≈ 10⁻⁶                  #/op
+Phase1UnpackBench.decode:iTLB-loads                        9    scalar-array  thrpt          ≈ 10⁻⁵                  #/op
+Phase1UnpackBench.decode:instructions                      9    scalar-array  thrpt          15.215                  #/op
+Phase1UnpackBench.decode:stalled-cycles-frontend           9    scalar-array  thrpt           0.013                  #/op
+Phase1UnpackBench.decode                                   9  parquet-scalar  thrpt    3   2233.511 ± 1341.586     ops/us
+Phase1UnpackBench.decode:CPI                               9  parquet-scalar  thrpt           0.225             clks/insn
+Phase1UnpackBench.decode:IPC                               9  parquet-scalar  thrpt           4.435             insns/clk
+Phase1UnpackBench.decode:L1-dcache-load-misses             9  parquet-scalar  thrpt           0.081                  #/op
+Phase1UnpackBench.decode:L1-dcache-loads                   9  parquet-scalar  thrpt           2.611                  #/op
+Phase1UnpackBench.decode:L1-icache-load-misses             9  parquet-scalar  thrpt          ≈ 10⁻⁵                  #/op
+Phase1UnpackBench.decode:L1-icache-loads                   9  parquet-scalar  thrpt           0.004                  #/op
+Phase1UnpackBench.decode:branch-misses                     9  parquet-scalar  thrpt          ≈ 10⁻³                  #/op
+Phase1UnpackBench.decode:branches                          9  parquet-scalar  thrpt           0.381                  #/op
+Phase1UnpackBench.decode:cycles                            9  parquet-scalar  thrpt           2.485                  #/op
+Phase1UnpackBench.decode:dTLB-load-misses                  9  parquet-scalar  thrpt          ≈ 10⁻⁵                  #/op
+Phase1UnpackBench.decode:dTLB-loads                        9  parquet-scalar  thrpt           0.002                  #/op
+Phase1UnpackBench.decode:iTLB-load-misses                  9  parquet-scalar  thrpt          ≈ 10⁻⁶                  #/op
+Phase1UnpackBench.decode:iTLB-loads                        9  parquet-scalar  thrpt          ≈ 10⁻⁵                  #/op
+Phase1UnpackBench.decode:instructions                      9  parquet-scalar  thrpt          11.022                  #/op
+Phase1UnpackBench.decode:stalled-cycles-frontend           9  parquet-scalar  thrpt           0.011                  #/op
+Phase1UnpackBench.decode                                   9  vector-segment  thrpt    3  10122.658 ±  174.689     ops/us
+Phase1UnpackBench.decode:CPI                               9  vector-segment  thrpt           0.345             clks/insn
+Phase1UnpackBench.decode:IPC                               9  vector-segment  thrpt           2.901             insns/clk
+Phase1UnpackBench.decode:L1-dcache-load-misses             9  vector-segment  thrpt           0.082                  #/op
+Phase1UnpackBench.decode:L1-dcache-loads                   9  vector-segment  thrpt           0.964                  #/op
+Phase1UnpackBench.decode:L1-icache-load-misses             9  vector-segment  thrpt          ≈ 10⁻⁶                  #/op
+Phase1UnpackBench.decode:L1-icache-loads                   9  vector-segment  thrpt           0.001                  #/op
+Phase1UnpackBench.decode:branch-misses                     9  vector-segment  thrpt          ≈ 10⁻⁴                  #/op
+Phase1UnpackBench.decode:branches                          9  vector-segment  thrpt           0.189                  #/op
+Phase1UnpackBench.decode:cycles                            9  vector-segment  thrpt           0.541                  #/op
+Phase1UnpackBench.decode:dTLB-load-misses                  9  vector-segment  thrpt          ≈ 10⁻⁶                  #/op
+Phase1UnpackBench.decode:dTLB-loads                        9  vector-segment  thrpt           0.001                  #/op
+Phase1UnpackBench.decode:iTLB-load-misses                  9  vector-segment  thrpt          ≈ 10⁻⁶                  #/op
+Phase1UnpackBench.decode:iTLB-loads                        9  vector-segment  thrpt          ≈ 10⁻⁶                  #/op
+Phase1UnpackBench.decode:instructions                      9  vector-segment  thrpt           1.568                  #/op
+Phase1UnpackBench.decode:stalled-cycles-frontend           9  vector-segment  thrpt           0.006                  #/op
+Phase1UnpackBench.decode                                  13    scalar-array  thrpt    3   2117.688 ± 2069.942     ops/us
+Phase1UnpackBench.decode:CPI                              13    scalar-array  thrpt           0.172             clks/insn
+Phase1UnpackBench.decode:IPC                              13    scalar-array  thrpt           5.818             insns/clk
+Phase1UnpackBench.decode:L1-dcache-load-misses            13    scalar-array  thrpt           0.089                  #/op
+Phase1UnpackBench.decode:L1-dcache-loads                  13    scalar-array  thrpt           2.919                  #/op
+Phase1UnpackBench.decode:L1-icache-load-misses            13    scalar-array  thrpt          ≈ 10⁻⁵                  #/op
+Phase1UnpackBench.decode:L1-icache-loads                  13    scalar-array  thrpt           0.004                  #/op
+Phase1UnpackBench.decode:branch-misses                    13    scalar-array  thrpt           0.001                  #/op
+Phase1UnpackBench.decode:branches                         13    scalar-array  thrpt           1.258                  #/op
+Phase1UnpackBench.decode:cycles                           13    scalar-array  thrpt           2.612                  #/op
+Phase1UnpackBench.decode:dTLB-load-misses                 13    scalar-array  thrpt          ≈ 10⁻⁵                  #/op
+Phase1UnpackBench.decode:dTLB-loads                       13    scalar-array  thrpt           0.002                  #/op
+Phase1UnpackBench.decode:iTLB-load-misses                 13    scalar-array  thrpt          ≈ 10⁻⁶                  #/op
+Phase1UnpackBench.decode:iTLB-loads                       13    scalar-array  thrpt          ≈ 10⁻⁵                  #/op
+Phase1UnpackBench.decode:instructions                     13    scalar-array  thrpt          15.195                  #/op
+Phase1UnpackBench.decode:stalled-cycles-frontend          13    scalar-array  thrpt           0.013                  #/op
+Phase1UnpackBench.decode                                  13  parquet-scalar  thrpt    3   1730.468 ± 1485.443     ops/us
+Phase1UnpackBench.decode:CPI                              13  parquet-scalar  thrpt           0.231             clks/insn
+Phase1UnpackBench.decode:IPC                              13  parquet-scalar  thrpt           4.330             insns/clk
+Phase1UnpackBench.decode:L1-dcache-load-misses            13  parquet-scalar  thrpt           0.089                  #/op
+Phase1UnpackBench.decode:L1-dcache-loads                  13  parquet-scalar  thrpt           3.172                  #/op
+Phase1UnpackBench.decode:L1-icache-load-misses            13  parquet-scalar  thrpt          ≈ 10⁻⁵                  #/op
+Phase1UnpackBench.decode:L1-icache-loads                  13  parquet-scalar  thrpt           0.005                  #/op
+Phase1UnpackBench.decode:branch-misses                    13  parquet-scalar  thrpt           0.001                  #/op
+Phase1UnpackBench.decode:branches                         13  parquet-scalar  thrpt           0.385                  #/op
+Phase1UnpackBench.decode:cycles                           13  parquet-scalar  thrpt           3.205                  #/op
+Phase1UnpackBench.decode:dTLB-load-misses                 13  parquet-scalar  thrpt          ≈ 10⁻⁵                  #/op
+Phase1UnpackBench.decode:dTLB-loads                       13  parquet-scalar  thrpt           0.002                  #/op
+Phase1UnpackBench.decode:iTLB-load-misses                 13  parquet-scalar  thrpt          ≈ 10⁻⁵                  #/op
+Phase1UnpackBench.decode:iTLB-loads                       13  parquet-scalar  thrpt          ≈ 10⁻⁵                  #/op
+Phase1UnpackBench.decode:instructions                     13  parquet-scalar  thrpt          13.877                  #/op
+Phase1UnpackBench.decode:stalled-cycles-frontend          13  parquet-scalar  thrpt           0.016                  #/op
+Phase1UnpackBench.decode                                  13  vector-segment  thrpt    3   9517.128 ±   37.742     ops/us
+Phase1UnpackBench.decode:CPI                              13  vector-segment  thrpt           0.369             clks/insn
+Phase1UnpackBench.decode:IPC                              13  vector-segment  thrpt           2.710             insns/clk
+Phase1UnpackBench.decode:L1-dcache-load-misses            13  vector-segment  thrpt           0.090                  #/op
+Phase1UnpackBench.decode:L1-dcache-loads                  13  vector-segment  thrpt           0.896                  #/op
+Phase1UnpackBench.decode:L1-icache-load-misses            13  vector-segment  thrpt          ≈ 10⁻⁶                  #/op
+Phase1UnpackBench.decode:L1-icache-loads                  13  vector-segment  thrpt           0.001                  #/op
+Phase1UnpackBench.decode:branch-misses                    13  vector-segment  thrpt          ≈ 10⁻⁴                  #/op
+Phase1UnpackBench.decode:branches                         13  vector-segment  thrpt           0.188                  #/op
+Phase1UnpackBench.decode:cycles                           13  vector-segment  thrpt           0.578                  #/op
+Phase1UnpackBench.decode:dTLB-load-misses                 13  vector-segment  thrpt          ≈ 10⁻⁶                  #/op
+Phase1UnpackBench.decode:dTLB-loads                       13  vector-segment  thrpt           0.002                  #/op
+Phase1UnpackBench.decode:iTLB-load-misses                 13  vector-segment  thrpt          ≈ 10⁻⁷                  #/op
+Phase1UnpackBench.decode:iTLB-loads                       13  vector-segment  thrpt          ≈ 10⁻⁷                  #/op
+Phase1UnpackBench.decode:instructions                     13  vector-segment  thrpt           1.566                  #/op
+Phase1UnpackBench.decode:stalled-cycles-frontend          13  vector-segment  thrpt           0.006                  #/op
+Phase1UnpackBench.decode                                  17    scalar-array  thrpt    3   2118.918 ± 2154.524     ops/us
+Phase1UnpackBench.decode:CPI                              17    scalar-array  thrpt           0.172             clks/insn
+Phase1UnpackBench.decode:IPC                              17    scalar-array  thrpt           5.830             insns/clk
+Phase1UnpackBench.decode:L1-dcache-load-misses            17    scalar-array  thrpt           0.097                  #/op
+Phase1UnpackBench.decode:L1-dcache-loads                  17    scalar-array  thrpt           2.925                  #/op
+Phase1UnpackBench.decode:L1-icache-load-misses            17    scalar-array  thrpt          ≈ 10⁻⁵                  #/op
+Phase1UnpackBench.decode:L1-icache-loads                  17    scalar-array  thrpt           0.004                  #/op
+Phase1UnpackBench.decode:branch-misses                    17    scalar-array  thrpt           0.001                  #/op
+Phase1UnpackBench.decode:branches                         17    scalar-array  thrpt           1.261                  #/op
+Phase1UnpackBench.decode:cycles                           17    scalar-array  thrpt           2.610                  #/op
+Phase1UnpackBench.decode:dTLB-load-misses                 17    scalar-array  thrpt          ≈ 10⁻⁵                  #/op
+Phase1UnpackBench.decode:dTLB-loads                       17    scalar-array  thrpt           0.002                  #/op
+Phase1UnpackBench.decode:iTLB-load-misses                 17    scalar-array  thrpt          ≈ 10⁻⁶                  #/op
+Phase1UnpackBench.decode:iTLB-loads                       17    scalar-array  thrpt          ≈ 10⁻⁵                  #/op
+Phase1UnpackBench.decode:instructions                     17    scalar-array  thrpt          15.214                  #/op
+Phase1UnpackBench.decode:stalled-cycles-frontend          17    scalar-array  thrpt           0.012                  #/op
+Phase1UnpackBench.decode                                  17  parquet-scalar  thrpt    3   1263.990 ±  406.036     ops/us
+Phase1UnpackBench.decode:CPI                              17  parquet-scalar  thrpt           0.238             clks/insn
+Phase1UnpackBench.decode:IPC                              17  parquet-scalar  thrpt           4.208             insns/clk
+Phase1UnpackBench.decode:L1-dcache-load-misses            17  parquet-scalar  thrpt           0.097                  #/op
+Phase1UnpackBench.decode:L1-dcache-loads                  17  parquet-scalar  thrpt           5.130                  #/op
+Phase1UnpackBench.decode:L1-icache-load-misses            17  parquet-scalar  thrpt          ≈ 10⁻⁵                  #/op
+Phase1UnpackBench.decode:L1-icache-loads                  17  parquet-scalar  thrpt           0.007                  #/op
+Phase1UnpackBench.decode:branch-misses                    17  parquet-scalar  thrpt           0.001                  #/op
+Phase1UnpackBench.decode:branches                         17  parquet-scalar  thrpt           1.131                  #/op
+Phase1UnpackBench.decode:cycles                           17  parquet-scalar  thrpt           4.351                  #/op
+Phase1UnpackBench.decode:dTLB-load-misses                 17  parquet-scalar  thrpt          ≈ 10⁻⁵                  #/op
+Phase1UnpackBench.decode:dTLB-loads                       17  parquet-scalar  thrpt           0.002                  #/op
+Phase1UnpackBench.decode:iTLB-load-misses                 17  parquet-scalar  thrpt          ≈ 10⁻⁵                  #/op
+Phase1UnpackBench.decode:iTLB-loads                       17  parquet-scalar  thrpt          ≈ 10⁻⁵                  #/op
+Phase1UnpackBench.decode:instructions                     17  parquet-scalar  thrpt          18.311                  #/op
+Phase1UnpackBench.decode:stalled-cycles-frontend          17  parquet-scalar  thrpt           0.013                  #/op
+Phase1UnpackBench.decode                                  17  vector-segment  thrpt    3   9780.693 ±   73.252     ops/us
+Phase1UnpackBench.decode:CPI                              17  vector-segment  thrpt           0.357             clks/insn
+Phase1UnpackBench.decode:IPC                              17  vector-segment  thrpt           2.803             insns/clk
+Phase1UnpackBench.decode:L1-dcache-load-misses            17  vector-segment  thrpt           0.097                  #/op
+Phase1UnpackBench.decode:L1-dcache-loads                  17  vector-segment  thrpt           0.900                  #/op
+Phase1UnpackBench.decode:L1-icache-load-misses            17  vector-segment  thrpt          ≈ 10⁻⁶                  #/op
+Phase1UnpackBench.decode:L1-icache-loads                  17  vector-segment  thrpt           0.001                  #/op
+Phase1UnpackBench.decode:branch-misses                    17  vector-segment  thrpt          ≈ 10⁻⁴                  #/op
+Phase1UnpackBench.decode:branches                         17  vector-segment  thrpt           0.188                  #/op
+Phase1UnpackBench.decode:cycles                           17  vector-segment  thrpt           0.560                  #/op
+Phase1UnpackBench.decode:dTLB-load-misses                 17  vector-segment  thrpt          ≈ 10⁻⁶                  #/op
+Phase1UnpackBench.decode:dTLB-loads                       17  vector-segment  thrpt           0.002                  #/op
+Phase1UnpackBench.decode:iTLB-load-misses                 17  vector-segment  thrpt          ≈ 10⁻⁷                  #/op
+Phase1UnpackBench.decode:iTLB-loads                       17  vector-segment  thrpt          ≈ 10⁻⁶                  #/op
+Phase1UnpackBench.decode:instructions                     17  vector-segment  thrpt           1.569                  #/op
+Phase1UnpackBench.decode:stalled-cycles-frontend          17  vector-segment  thrpt           0.007                  #/op
+Phase1UnpackBench.decode                                  26    scalar-array  thrpt    3   2117.683 ± 2171.858     ops/us
+Phase1UnpackBench.decode:CPI                              26    scalar-array  thrpt           0.172             clks/insn
+Phase1UnpackBench.decode:IPC                              26    scalar-array  thrpt           5.823             insns/clk
+Phase1UnpackBench.decode:L1-dcache-load-misses            26    scalar-array  thrpt           0.115                  #/op
+Phase1UnpackBench.decode:L1-dcache-loads                  26    scalar-array  thrpt           2.923                  #/op
+Phase1UnpackBench.decode:L1-icache-load-misses            26    scalar-array  thrpt          ≈ 10⁻⁵                  #/op
+Phase1UnpackBench.decode:L1-icache-loads                  26    scalar-array  thrpt           0.004                  #/op
+Phase1UnpackBench.decode:branch-misses                    26    scalar-array  thrpt           0.001                  #/op
+Phase1UnpackBench.decode:branches                         26    scalar-array  thrpt           1.260                  #/op
+Phase1UnpackBench.decode:cycles                           26    scalar-array  thrpt           2.610                  #/op
+Phase1UnpackBench.decode:dTLB-load-misses                 26    scalar-array  thrpt          ≈ 10⁻⁵                  #/op
+Phase1UnpackBench.decode:dTLB-loads                       26    scalar-array  thrpt           0.002                  #/op
+Phase1UnpackBench.decode:iTLB-load-misses                 26    scalar-array  thrpt          ≈ 10⁻⁶                  #/op
+Phase1UnpackBench.decode:iTLB-loads                       26    scalar-array  thrpt          ≈ 10⁻⁶                  #/op
+Phase1UnpackBench.decode:instructions                     26    scalar-array  thrpt          15.199                  #/op
+Phase1UnpackBench.decode:stalled-cycles-frontend          26    scalar-array  thrpt           0.014                  #/op
+Phase1UnpackBench.decode                                  26  parquet-scalar  thrpt    3   1009.641 ±   84.216     ops/us
+Phase1UnpackBench.decode:CPI                              26  parquet-scalar  thrpt           0.240             clks/insn
+Phase1UnpackBench.decode:IPC                              26  parquet-scalar  thrpt           4.169             insns/clk
+Phase1UnpackBench.decode:L1-dcache-load-misses            26  parquet-scalar  thrpt           0.115                  #/op
+Phase1UnpackBench.decode:L1-dcache-loads                  26  parquet-scalar  thrpt           6.634                  #/op
+Phase1UnpackBench.decode:L1-icache-load-misses            26  parquet-scalar  thrpt          ≈ 10⁻⁵                  #/op
+Phase1UnpackBench.decode:L1-icache-loads                  26  parquet-scalar  thrpt           0.008                  #/op
+Phase1UnpackBench.decode:branch-misses                    26  parquet-scalar  thrpt           0.001                  #/op
+Phase1UnpackBench.decode:branches                         26  parquet-scalar  thrpt           1.131                  #/op
+Phase1UnpackBench.decode:cycles                           26  parquet-scalar  thrpt           5.457                  #/op
+Phase1UnpackBench.decode:dTLB-load-misses                 26  parquet-scalar  thrpt          ≈ 10⁻⁶                  #/op
+Phase1UnpackBench.decode:dTLB-loads                       26  parquet-scalar  thrpt           0.002                  #/op
+Phase1UnpackBench.decode:iTLB-load-misses                 26  parquet-scalar  thrpt          ≈ 10⁻⁵                  #/op
+Phase1UnpackBench.decode:iTLB-loads                       26  parquet-scalar  thrpt          ≈ 10⁻⁶                  #/op
+Phase1UnpackBench.decode:instructions                     26  parquet-scalar  thrpt          22.752                  #/op
+Phase1UnpackBench.decode:stalled-cycles-frontend          26  parquet-scalar  thrpt           0.020                  #/op
+Phase1UnpackBench.decode                                  26  vector-segment  thrpt    3   6813.447 ±   50.957     ops/us
+Phase1UnpackBench.decode:CPI                              26  vector-segment  thrpt           0.279             clks/insn
+Phase1UnpackBench.decode:IPC                              26  vector-segment  thrpt           3.590             insns/clk
+Phase1UnpackBench.decode:L1-dcache-load-misses            26  vector-segment  thrpt           0.121                  #/op
+Phase1UnpackBench.decode:L1-dcache-loads                  26  vector-segment  thrpt           1.200                  #/op
+Phase1UnpackBench.decode:L1-icache-load-misses            26  vector-segment  thrpt          ≈ 10⁻⁶                  #/op
+Phase1UnpackBench.decode:L1-icache-loads                  26  vector-segment  thrpt           0.001                  #/op
+Phase1UnpackBench.decode:branch-misses                    26  vector-segment  thrpt          ≈ 10⁻⁴                  #/op
+Phase1UnpackBench.decode:branches                         26  vector-segment  thrpt           0.376                  #/op
+Phase1UnpackBench.decode:cycles                           26  vector-segment  thrpt           0.802                  #/op
+Phase1UnpackBench.decode:dTLB-load-misses                 26  vector-segment  thrpt          ≈ 10⁻⁶                  #/op
+Phase1UnpackBench.decode:dTLB-loads                       26  vector-segment  thrpt           0.001                  #/op
+Phase1UnpackBench.decode:iTLB-load-misses                 26  vector-segment  thrpt          ≈ 10⁻⁶                  #/op
+Phase1UnpackBench.decode:iTLB-loads                       26  vector-segment  thrpt          ≈ 10⁻⁶                  #/op
+Phase1UnpackBench.decode:instructions                     26  vector-segment  thrpt           2.880                  #/op
+Phase1UnpackBench.decode:stalled-cycles-frontend          26  vector-segment  thrpt           0.004                  #/op
