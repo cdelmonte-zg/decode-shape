@@ -116,7 +116,7 @@ def figure1(perf, out):
     vec = [perf[(w, "vector-segment")] for w in widths]
 
     ax.plot(widths, parq, "-o", color=C_PARQ, lw=2.4, ms=6, label="parquet (specialized)", zorder=3)
-    ax.plot(widths, naive, "-o", color=C_NAIVE, lw=2.4, ms=6, label="naive (scalar)", zorder=3)
+    ax.plot(widths, naive, "-o", color=C_NAIVE, lw=2.4, ms=6, label="generic (scalar)", zorder=3)
     ax.plot(widths, vec, "-o", color=C_VECTOR, lw=2.4, ms=6, label="vector (explicit)", zorder=3)
 
     ax.annotate(f"{parq[-1]:.2f}", (widths[-1], parq[-1]), xytext=(6, 2),
@@ -203,7 +203,7 @@ def figure3(on, out):
     fig, ax = plt.subplots(figsize=(8.2, 4.7))
     style(ax)
     ax.axhline(naive, ls="--", color=C_NAIVE, lw=2, zorder=2,
-               label=f"naive scalar (flat ~{int(naive)})")
+               label=f"generic scalar (flat ~{int(naive)})")
     ax.plot(widths, parq, "-o", color=C_PARQ, lw=2.4, ms=6,
             label="parquet (specialized)", zorder=3)
     ax.fill_between(widths, parq, naive, where=[p < naive for p in parq],
@@ -216,7 +216,7 @@ def figure3(on, out):
         ax.annotate(f"w{w}: {v:.0f}", (w, v), xytext=(0, -16), textcoords="offset points",
                     ha="center", color=C_PARQ, fontsize=10, weight="600")
 
-    ax.set_title("The backfire: Parquet's specialized scalar drops below the naive")
+    ax.set_title("The backfire: Parquet's specialized scalar drops below the generic scalar")
     ax.set_xlabel("bit width")
     ax.set_ylabel("throughput (values/µs)")
     ax.set_xticks(widths)
@@ -224,7 +224,7 @@ def figure3(on, out):
     ax.legend(frameon=False, loc="upper right", fontsize=10.5)
     fig.text(0.5, -0.02,
              "Pays off at the small, aligned widths (w8, w16); at the wide, irregular widths "
-             "it does more work per value and, not vectorized, drops below the naive.",
+             "it does more work per value and, not vectorized, drops below the generic scalar.",
              ha="center", fontsize=10, color=C_MUTED)
     save(fig, out, "fig1-parquet-backfire.svg")
 
