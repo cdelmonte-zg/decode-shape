@@ -21,3 +21,4 @@ results/asm/
 # hsdis build artifacts (sparse JDK clone + compiled .so; build-hsdis.sh is tracked)
 hsdis-build/jdk/
 hsdis-build/lib/
+hsdis-build/lib-llvm/

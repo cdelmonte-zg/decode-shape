@@ -23,7 +23,7 @@ import os
 import re
 import sys
 
-# ---- expected anchors (this-host article numbers, for the report text) -------
+# ---- expected anchors (the published numbers for this host, for the report text) ----
 ART = {
     "vec_insns": 1.57,      # vector int-lane, widths <= 25
     "vec_insns_w26": 2.88,  # vector long-lane, width 26
@@ -309,7 +309,7 @@ def perf_table(perf):
 # These are a different KIND of check from the numeric ones above: they grep the
 # emitted C2 machine code and the perfasm cycle attribution, not JSON tolerances.
 # They guard the JDK-25-specific narrative: if a future JDK actually auto-vectorizes
-# the widening loop (emits vpmovzx*), check 13 fails and flags that the article's
+# the widening loop (emits vpmovzx*), check 13 fails and flags that the published
 # machine-code account no longer holds on that JDK. Inputs live in run-dir/asm/,
 # produced by Run 4 of run_lab.sh (needs a JDK 25-compatible hsdis). Missing inputs
 # are SKIPPED, not failed (a --no-env / hsdis-less run still verifies everything else).
@@ -405,8 +405,8 @@ def run_asm_checks(asm_dir, did_setup, c):
 def render(env, on, off, perf, perf_off, c):
     mark = {"PASS": "PASS", "FAIL": "**FAIL**", "WARN": "WARN", "SKIP": "skip"}
     grade = {"quick": "smoke (NOT citable)",
-             "default": "reproduction / CI (NOT the article's measurement of record)",
-             "full": "article-grade (matches RESULTS.md: 3 forks, 5+5 iters)",
+             "default": "reproduction / CI (NOT the measurement of record)",
+             "full": "full (matches RESULTS.md: 3 forks, 5+5 iters)",
              "publication": "publication-grade (3 forks, long warmup)"}.get(
                  env.get("profile", ""), env.get("profile", "?"))
     nfail = c.n_fail

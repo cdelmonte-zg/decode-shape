@@ -13,7 +13,7 @@ exact run commands, and the measured numbers (filled in as runs are done).
 
 ## Publication measurement of record
 
-The article published on 2026-06-09 uses the publication-grade run performed with:
+The measurement of record, from the publication-grade run of 2026-06-09:
 
 - benchmark run: performed at the source commit recorded in `publication/2026-06-article/env.txt` (`git_commit=14c6b5b`); that record is archival and independent of this repository's git history
 - throughput profile: `--publication` (3 forks, 5 × 3 s warmup, 10 × 1 s measurement)
@@ -22,7 +22,7 @@ The article published on 2026-06-09 uses the publication-grade run performed wit
 - generated report: `publication/2026-06-article/report.md`
 
 The tables further below document the development and pre-registration history
-(earlier runs) and should not be read as the article's exact numerical source.
+(earlier runs) and should not be read as the numerical source of record.
 
 ## Environment
 
@@ -191,7 +191,7 @@ design artifact, not proof the phenomenon is absent:**
   `unpack8Values` uses *fixed* per-position shifts over a width-byte block —
   which C2 *can* sometimes auto-vectorize. That baseline is missing.
 
-**Conclusion for the article question:** the *infrastructure* and the *Phase 0*
+**Conclusion for the brief's question:** the *infrastructure* and the *Phase 0*
 contribution are solid, but **Phase 1 as currently shaped does not yet contain a
 failure map** — and won't, until the decoders gain the variation axes that
 expose one (a parquet-style fixed-shift scalar; widths 24/25/26/32; possibly a

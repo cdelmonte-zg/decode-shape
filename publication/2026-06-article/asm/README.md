@@ -5,7 +5,10 @@ C2-compiled assembly (Intel syntax) of `ScalarWidenDecoder::decode` on the publi
 
 Each file contains the **complete** set of compiled versions of that one method (C1 tier-3,
 C2-OSR, C2 standard) and nothing else — unrelated JIT output (`String::hashCode`, etc.) from
-the full PrintAssembly dump has been stripped. The extraction is mechanical:
+the full PrintAssembly dump has been stripped. The extraction is mechanical (`homog.decode.asm`, the positive control, was decoded by
+capstone 4.0.2, which leaves four AVX-512 instructions with base and index both in
+`r8` to `r15` as `.byte 0x62` followed by nonsense; the `vmovdqu32`/`vpaddd` lines that
+carry the conclusion decode, and the widening listings have no such line):
 
 ```bash
 awk '/^Compiled method/{keep=/ScalarWidenDecoder::decode/} keep{print}' results/asm/<mode>.asm

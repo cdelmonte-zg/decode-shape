@@ -135,7 +135,7 @@ def figure1(perf, out):
     ax.set_xticklabels([f"w{w}" for w in widths])
     ax.set_ylim(0, 25)
     ax.legend(frameon=False, loc="center left", fontsize=10.5)
-    save(fig, out, "fig2-insns-per-value.svg")  # file number = editorial order in the article (backfire=1, insns=2, floor=3)
+    save(fig, out, "fig2-insns-per-value.svg")  # file number = editorial order (backfire=1, insns=2, floor=3)
 
 
 # =============================================================================

@@ -8,8 +8,8 @@
 # ALWAYS restores the previous environment on exit.
 #
 #   ./run_lab.sh                 # default profile (solid, ~15-20 min)
-#   ./run_lab.sh --quick         # smoke run (1 fork, fast) — not article-grade
-#   ./run_lab.sh --full          # article-grade (3 forks, 5 warmup + 5 measure x1s)
+#   ./run_lab.sh --quick         # smoke run (1 fork, fast), not citable
+#   ./run_lab.sh --full          # 3 forks, 5 warmup + 5 measure x1s (matches RESULTS.md)
 #   ./run_lab.sh --publication   # citable: 3 forks, 5x3s warmup + 10x1s measure, + perfnorm OFF
 #   ./run_lab.sh --no-env        # don't touch governor/perf (no sudo); perfnorm skipped
 #   ./run_lab.sh --no-restore    # leave the tuned environment in place afterwards
